@@ -1,11 +1,10 @@
 class CreateTargetAmounts < ActiveRecord::Migration[7.0]
   def change
     create_table :target_amounts do |t|
-      t.integer :date
+      t.date :target_date
       t.integer :target_amount
-      t.integer :balance_id
+      t.references :balance, foreign_key: true, null: false
       t.string :status
-      t.string :history_transaction
 
       t.timestamps
     end

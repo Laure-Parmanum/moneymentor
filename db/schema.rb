@@ -10,9 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_161851) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_09_122636) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "balances", force: :cascade do |t|
+    t.date "date"
+    t.float "current_balance"
+    t.bigint "user_id", null: false
+    t.integer "account_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_balances_on_user_id"
+  end
+
+  create_table "target_amounts", force: :cascade do |t|
+    t.date "target_date"
+    t.integer "target_amount"
+    t.bigint "balance_id", null: false
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["balance_id"], name: "index_target_amounts_on_balance_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.date "date"
+    t.float "amount"
+    t.string "description"
+    t.string "payment_method"
+    t.string "category"
+    t.bigint "balance_id", null: false
+    t.string "currency"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["balance_id"], name: "index_transactions_on_balance_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +56,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_161851) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "balances", "users"
+  add_foreign_key "target_amounts", "balances"
+  add_foreign_key "transactions", "balances"
 end
