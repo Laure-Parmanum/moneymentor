@@ -1,4 +1,10 @@
 class SignController < ApplicationController
-  def up
+  def sing_up
+  end
+
+  def sign_in
+  end
+
+  def sign_out
   end
 end
