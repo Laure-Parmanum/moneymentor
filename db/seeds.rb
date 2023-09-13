@@ -7,14 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# Income.create([
-#   {
-#     source: "Job",
-#     amount: 5000,
-#     date: Date.new(2023, 1, 1) },
-#   { source: "Freelancing", amount: 1000, date: Date.new(2023, 1, 15) },
-#  ])
-
 # Balance.create([
 #   {
 #     balance: 6000,
