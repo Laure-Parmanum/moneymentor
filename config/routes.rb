@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :balances
   resources :targets
+  resources :transactions
 end
