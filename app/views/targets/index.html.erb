@@ -1,0 +1,32 @@
+<!-- app/views/targets/index.html.erb -->
+
+<h1>Targets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Target Date</th>
+      <th>Target Amount</th>
+      <th>Status</th>
+      <th>Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @targets.each do |target| %>
+      <tr>
+
+        <td><%= target.target_date %></td>
+        <td>$<%= target.target_amount %></td>
+        <td><%= target.status ? 'Completed' : 'Pending' %></td>
+        <td>
+          <%# <%= link_to 'Show', target %>
+          <%# <%= link_to 'Edit', edit_target_path(target) %>
+          <%# <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %> 
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Target', new_target_path %>

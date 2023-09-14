@@ -38,3 +38,10 @@
 #     target_date: Date.new(2023, 12, 31)
 #   },
 # ])
+TargetAmount.destroy_all
+Balance.destroy_all
+User.destroy_all
+
+user = User.create(email: "test@gmail.com", password: "password")
+balance = Balance.create(user: User.first)
+targetamount = TargetAmount.create(target_date: DateTime.now, target_amount: 1000, status: true, balance: balance)
