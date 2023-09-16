@@ -18,9 +18,12 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
 
     if @transaction.save
-      @transaction.update_balance
+      if @transaction.type == "Debit"
+        @balance = @balance.current_balance + @transaction.amount
+      else
+        @balance = @balance.current_balance - @transaction.amount
+      end
       redirect_to transactions_path, notice: 'Transaction was successfully created.'
-      # could be redirected to balance_path
     else
       render :new
     end
