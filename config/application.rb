@@ -15,6 +15,9 @@ module Moneymentor
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.assets.enabled = true
+    config.assets.js_compressor = :uglifier
+    # or another JavaScript compressor
 
     # Configuration for the application, engines, and railties goes here.
     #
