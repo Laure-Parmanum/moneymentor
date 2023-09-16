@@ -47,10 +47,10 @@ User.destroy_all
 # Create a test user
 user = User.create(
   email: 'test@example.com',
-  encrypted_password: Devise.friendly_token[0, 20],
+  password: "password",
   first_name: 'Test',
   last_name: 'User',
-  date_of_birth: Date.new(1990, 1, 1)
+  date_of_birth: DateTime.new(1990, 1, 1)
 )
 # Create a test balance for the user
 balance = Balance.create(
