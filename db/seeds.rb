@@ -68,16 +68,16 @@ debit_transaction = Transaction.create(
   category: 'Expense',
   balance: balance,
   currency: 'USD',
-  type: 'debit'
+  transaction_type: 'debit'
 )
 credit_transaction = Transaction.create(
   date: Date.today,
-  amount: -300.0, # Credit amount (negative)
+  amount: 300.0, # Credit amount (negative)
   description: 'Test Credit',
   payment_method: 'Bank Transfer',
   category: 'Income',
   balance: balance,
   currency: 'USD',
-  type: 'credit'
+  transaction_type: 'credit'
 )
 puts 'Seed data created successfully.'
