@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :balances
-  resources :targets
+  resources :target_amounts
   resources :transactions
 end

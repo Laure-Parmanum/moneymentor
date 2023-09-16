@@ -1,0 +1,6 @@
+<h1>Create a new target</h1>
+<%= simple_form_for([@target]) do |f| %>
+  <%= f.input :target_date %>
+  <%= f.input :target_amount %>
+  <%= f.button :submit %>
+<% end %>
