@@ -49,8 +49,8 @@ user = User.create(
   email: 'test@example.com',
   password: "password",
   first_name: 'Test',
-  last_name: 'User',
-  date_of_birth: Date.new(1990, 1, 1)
+  last_name: 'User'
+
 )
 # Create a test balance for the user
 balance = Balance.create(
@@ -60,7 +60,7 @@ balance = Balance.create(
   account_number: 1234567890
 )
 # Create test debit and credit transactions
-debit_transaction = Transaction.create(
+debittransaction = Transaction.create(
   date: Date.today,
   amount: 500.0, # Debit amount (positive)
   description: 'Test Debit',
@@ -70,7 +70,7 @@ debit_transaction = Transaction.create(
   currency: 'USD',
   type: 'debit'
 )
-credit_transaction = Transaction.create(
+credittransaction = Transaction.create(
   date: Date.today,
   amount: -300.0, # Credit amount (negative)
   description: 'Test Credit',

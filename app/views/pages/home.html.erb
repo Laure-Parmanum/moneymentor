@@ -1,8 +1,5 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner.jpg') %>');">
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner1.jpg') %>');">
   <div class="container">
     <h1>Welcome to Moneymentor</h1>
     <p> Your partner for financial success, knowledge, and empowerment </p>
@@ -12,45 +9,33 @@
 <div class="features-section-container">
 <div class="features-section">
 
-  <%= image_tag('1 image') %>
+  <%= image_tag('expense.jpg') %>
 
-   <% if @categories.any? %>
-      <p><%= link_to "", service_path(@.first) %></p>
-    <% end %>
-    <p>xxxxxxxxxxxxxxxx.</p>
+
+   <p>xxxxxxxxxxxxxxxx.</p>
 
 
   </div>
 
 <div class="features-section">
 
-  <%= image_tag('2 image') %>
-    <% if @categories.any? %>
-      <p><%= link_to "", service_path(@services[3]) %></p>
-    <% end %>
+  <%= image_tag('goals.jpg') %>
+
     <p>xxxxxxxxxxxxxxxxxxx</p>
 
   </div>
 
 <div class="features-section">
 
-  <%= image_tag('3 image') %>
-    <% if @categories.any? %>
-      <p><%= link_to "", service_path(@services[2]) %></p>
-    <% end %>
+  <%= image_tag('balance1.jpg') %>
+
     <p>xxxxxxxxxxxxxxxxx.</p>
 
   </div>
 
-<div class="features-section">
-
-<%= image_tag('4 image') %>
-
-    <% if @categories.any? %>
-      <p><%= link_to "", service_path(@services[1]) %></p>
-    <% end %>
-    <p>xxxxxxxxxxxxxxxxx.</p>
-
-  </div>
 
 </div>
+
+<% @balances.each do |balance| %>
+  <li><%= balance.current_balance %></li>
+<% end %>
