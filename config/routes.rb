@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   end
   resources :target_amounts
   resources :transactions, only: [:update]
-
 end
