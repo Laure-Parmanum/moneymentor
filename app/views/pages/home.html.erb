@@ -2,7 +2,7 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner.jpg') %>');">
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner.jpg') %>');"> %>
   <div class="container">
     <h1>Welcome to Moneymentor</h1>
     <p> Your partner for financial success, knowledge, and empowerment </p>
@@ -12,10 +12,10 @@
 <div class="features-section-container">
 <div class="features-section">
 
-  <%= image_tag('1 image') %>
+  <%# <%= image_tag('1 image') %> %>
 
    <% if @categories.any? %>
-      <p><%= link_to "", service_path(@.first) %></p>
+      <%# <p><%= link_to "", service_path(@.first) %></p> %>
     <% end %>
     <p>xxxxxxxxxxxxxxxx.</p>
 

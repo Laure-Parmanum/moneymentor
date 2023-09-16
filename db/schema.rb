@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_09_135419) do
     t.string "category"
     t.bigint "balance_id", null: false
     t.string "currency"
-    t.string "type"#debit or credit
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["balance_id"], name: "index_transactions_on_balance_id"
