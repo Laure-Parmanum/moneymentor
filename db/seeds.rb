@@ -80,4 +80,13 @@ credit_transaction = Transaction.create(
   currency: 'USD',
   transaction_type: 'credit'
 )
-puts 'Seed data created successfully.'
+
+# Create test target amount
+
+target_amount = TargetAmount.create!(
+  target_date: Date.today,
+  target_amount: 50000,
+  status: "not acheived",
+  balance: balance
+  )
+  puts 'Seed data created successfully.'

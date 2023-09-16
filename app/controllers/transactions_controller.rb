@@ -23,7 +23,7 @@ class TransactionsController < ApplicationController
       else
         @balance = @balance.current_balance - @transaction.amount
       end
-      redirect_to transactions_path, notice: 'Transaction was successfully created.'
+      redirect_to balances_path, notice: 'Transaction was successfully created.'
     else
       render :new
     end

@@ -7,6 +7,7 @@ class TargetAmountsController < ApplicationController
   end
 
   def show
+    @targets = TargetAmount.all
   end
 
   def new
@@ -46,7 +47,7 @@ class TargetAmountsController < ApplicationController
   private
 
   def set_target
-    @target = Target.find(params[:id])
+    @target = TargetAmount.find(params[:id])
   end
 
   def target_params
