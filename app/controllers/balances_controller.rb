@@ -7,7 +7,8 @@ class BalancesController < ApplicationController
   end
 
   def show
-
+    @balances = Balance.all
+    @targets = TargetAmount.all
   end
 
   def new
