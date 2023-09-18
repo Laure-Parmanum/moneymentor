@@ -1,5 +1,5 @@
 class Transaction < ApplicationRecord
-  belongs_to :balance
+  belongs_to :balances
    # Custom validation to determine the type (credit or debit)
   # validate :determine_type_based_on_amount
 

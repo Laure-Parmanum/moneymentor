@@ -1,0 +1,90 @@
+/* app/assets/stylesheets/target_amounts.scss */
+
+/* Page Heading */
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #d3d3d3;
+}
+
+/* Actions Column Styling */
+td:last-child {
+  text-align: center;
+}
+
+.actions a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.actions a:hover {
+  color: #0056b3;
+}
+
+.delete-link {
+  color: #dc3545;
+}
+
+/* New Target Button */
+.new-target-button {
+  margin-top: 20px;
+}
+
+/* Custom Button Styling */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #a31c31;
+}
+
