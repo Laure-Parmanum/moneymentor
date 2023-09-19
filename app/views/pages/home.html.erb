@@ -9,8 +9,9 @@
 <div class="features-section-container">
 <div class="features-section">
 
+  <%= link_to balances_path do%>
   <%= image_tag('balance.jpg') %>
-
+  <% end %>
     <p>xxxxxxxxxxxxxxxx.</p>
 
 
@@ -34,32 +35,33 @@
 
 
 <div class="footer">
-  <div class="footer-links">
   <h3>Moneymentor<span></span></h3>
+  <div class="footer-links-container">
 
-  <p class="footer-links">
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">Pricing</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
-				</p>
+  <ul class="footer-links">
+				<li >	<a href="#">Home</a> </li>
 
-				<p class="footer-company-name">Moneymentor © 2023</p>
+				<li>	<a href="#">Blog</a> </li>
 
+				<li>	<a href="#">Pricing</a> </li>
+
+				<li>	<a href="#">About</a> </li>
+
+				<li>	<a href="#">Faq</a> </li>
+
+				<li>	<a href="#">Contact</a> </li>
+				</ul>
+
+<div>
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
-  <div class="footer-copyright">
+				<p class="footer-company-name">Moneymentor © 2023</p>
+  <%# <div class="footer-copyright">
     This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
+  </div> %>
 </div>
