@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 # Balance.create([
 #   {
 #     balance: 6000,
@@ -38,8 +37,6 @@
 # balance = Balance.create(user: User.first)
 # targetamount = TargetAmount.create(target_date: DateTime.now, target_amount: 1000, status: true, balance: balance)
 # transaction = Transaction.create(date: 14/09/2023, amount: 5000, description: "telephone bill", payment_method: "cash", category: "utilities", currency: "$", type: "Credit" )
-
-
 
 Transaction.destroy_all
 Balance.destroy_all

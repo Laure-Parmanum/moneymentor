@@ -20,9 +20,9 @@
         <td>$<%= target.target_amount %></td>
         <td><%= target.status ? 'Completed' : 'Pending' %></td>
         <td>
-          <%# <%= link_to 'Show', target %>
-          <%# <%= link_to 'Edit', edit_target_path(target) %>
-          <%# <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Show', target
+          # <%# <%= link_to 'Edit', edit_target_path(target) %>
+          # <%# <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
