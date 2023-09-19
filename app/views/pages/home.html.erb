@@ -5,61 +5,56 @@
     <p> Your partner for financial success, knowledge, and empowerment </p>
   </div>
 </div>
-
 <div class="features-section-container">
 <div class="features-section">
 
+
+  <%= link_to balances_path do%>
   <%= image_tag('balance.jpg') %>
 
+  <% end %>
     <p>xxxxxxxxxxxxxxxx.</p>
-
-
-  </div>
+    </div>
 
 <div class="features-section">
-
-  <%= image_tag('expense.jpg') %>
-
-    <p>xxxxxxxxxxxxxxxxxxx</p>
-
-  </div>
+    <%= image_tag('balance.jpg') %>
+     <p>xxxxxxxxxxxxxxxx.</p>
+</div>
 
 <div class="features-section">
-
-  <%= image_tag('goals.jpg') %>
-
-    <p>xxxxxxxxxxxxxxxxxxx</p>
-
-  </div>
+    <%= image_tag('balance.jpg') %>
+     <p>xxxxxxxxxxxxxxxx.</p>
+</div>
 
 
 <div class="footer">
-  <div class="footer-links">
   <h3>Moneymentor<span></span></h3>
 
-  <p class="footer-links">
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">Pricing</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
-				</p>
 
-				<p class="footer-company-name">Moneymentor © 2023</p>
+  <div class="footer-links-container">
 
+  <ul class="footer-links">
+				<li >	<a href="#">Home</a> </li>
+
+				<li>	<a href="#">About</a> </li>
+
+				<li>	<a href="#">Faq</a> </li>
+
+				<li>	<a href="#">Contact</a> </li>
+				</ul>
+
+<div>
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
   <div class="footer-copyright">
+	<p class="footer-company-name">Moneymentor © 2023</p>
+  <%# <div class="footer-copyright">
     This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
+  </div> %>
 </div>
