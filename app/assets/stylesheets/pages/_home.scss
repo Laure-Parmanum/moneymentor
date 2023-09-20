@@ -5,7 +5,6 @@
   align-items: center;
   padding: 50px 0;
 }
-
 .feature {
   text-align: center;
   width: 30%;
@@ -14,37 +13,33 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .features-section {
   width: 294px;
   img {
     width: 100%;
-
   }
   p a {
     text-decoration: none;
     color: #ddd;
   }
 }
-
 .feature img {
   max-width: 30%;
 }
-
 .feature h2 {
   font-size: 24px;
   margin-top: 10px;
 }
-
 .feature p {
   margin-top: 10px;
 }
-
 .icon {
   font-size: 36px;
   color: #0D6EFD;
   margin-top: 15px;
 }
+
+
 
 
 .banner {
@@ -132,9 +127,6 @@ body {
   opacity: 1;
 }
 
-.footer .fa-heart {
-  color: #D23333;
-}
 
 
 body {
