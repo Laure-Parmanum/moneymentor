@@ -1,8 +1,15 @@
 <!-- app/views/targets/show.html.erb -->
 
 <h1>Target Details</h1>
-<% @targets.each do |target| %>
-  <li><p><strong>Target Date:</strong> <%= @target.target_date %></p></li>
-  <li><p><strong>Target Amount:</strong> $<%= @target.target_amount %></p></li>
-  <li><p><strong>Status:</strong> <%= @target.status ? 'Completed' : 'Pending' %></p></li>
-<% end %>
+<p><strong>Remaining Balance:</strong> $<%= number_to_currency(@remaining_amount) %></p>
+<ul>
+  <% @targets.each do |target| %>
+    <li>
+      <p><strong>Target Date:</strong> <%= target.target_date %></p>
+      <p><strong>Target Amount:</strong> $<%= target.target_amount %></p>
+      <p><strong>Status:</strong> <%= target.status ? 'Completed' : 'Pending' %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>

@@ -1,32 +1,36 @@
 <!-- app/views/targets/index.html.erb -->
-
 <h1>Targets</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Target Date</th>
-      <th>Target Amount</th>
-      <th>Status</th>
-      <th>Actions</th>
+<p>Remaining Amount: <%= @remaining_amount %></p>
 
-    </tr>
-  </thead>
-  <tbody>
-    <% @targets.each do |target| %>
+<% if @targets.any? %>
+  <table>
+    <thead>
       <tr>
-
-        <td><%= target.target_date %></td>
-        <td>$<%= target.target_amount %></td>
-        <td><%= target.status ? 'Completed' : 'Pending' %></td>
-        <td>
-          <%# <%= link_to 'Show', target %>
-          <%# <%= link_to 'Edit', edit_target_path(target) %>
-          <%# <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Action</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @targets.each do |target| %>
+        <tr>
+          <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
+          <td><%= target.target_amount %></td>
+          <td><%= target.status ? 'Completed' : 'Pending' %></td>
+          <td>
+            <%= link_to 'Show', target %>
+            <%# <%= link_to 'Edit', edit_target_path(target) %>
+            <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No targets available.</p>
+  <% end %>
+  <%= link_to 'New Target', new_target_amount_path %>
 
-<%= link_to 'New Target', new_target_amount_path %>
+<%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>

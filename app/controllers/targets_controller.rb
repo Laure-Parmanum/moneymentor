@@ -4,6 +4,10 @@ class TargetsController < ApplicationController
   def index
     # @targets = current_user.targets
     @targets = TargetAmount.all
+
+    # code added by arnaud
+    @remaining_amount = calculate_remaining_amount
+    @target_data = generate_target_data
   end
 
   def show
@@ -52,4 +56,32 @@ class TargetsController < ApplicationController
   def target_params
     params.require(:target).permit(:target_date, :target_amount, :balance_id, :status, :history_transaction)
   end
+
+  # code added by arnaud
+  def calculate_remaining_amount
+    # For example, summing up completed targets
+    completed_targets = TargetAmount.where(status: true)
+    total_completed_amount = completed_targets.sum(:target_amount)
+    total_target_amount = TargetAmount.sum(:target_amount)
+    remaining_amount = total_target_amount - total_completed_amount
+    return remaining_amount
+  end
+
+  def generate_target_data
+    # Generate data for the chart
+
+    target_labels = []
+    target_data = []
+
+    @targets.each do |target|
+      target_labels << target.target_date.strftime('%Y-%m-%d')
+      target_data << target.target_amount
+    end
+
+    {
+      labels: target_labels,
+      data: target_data
+    }
+  end
+
 end
