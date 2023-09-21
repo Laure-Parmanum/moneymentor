@@ -1,0 +1,43 @@
+<div class="container">
+  <h2 class="text-center">Welcome to Home Page</h2>
+
+  <h1 class="text-center">About Our Financial Management Application</h1>
+
+  <p>Welcome to our financial management application! Our goal is to provide you with a user-friendly platform to help you take control of your finances and achieve your financial goals.</p>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li><strong>Balance Tracking:</strong> Easily track your account balances, income, and expenses in one place.</li>
+    <li><strong>Transaction Management:</strong> Record and categorize your financial transactions for better expense tracking.</li>
+    <li><strong>Goal Setting:</strong> Set savings and budget goals to stay on top of your financial objectives.</li>
+    <li><strong>Insights and Reports:</strong> Gain valuable insights into your spending habits with detailed reports and charts.</li>
+  </ul>
+
+  <h2>How to Get Started</h2>
+  <ol>
+    <li><strong>Sign Up:</strong> Create an account or log in if you're an existing user.</li>
+    <li><strong>Add Your Balances:</strong> Start by adding your current account balances to get an overview of your finances.</li>
+    <li><strong>Record Transactions:</strong> Add your income and expense transactions to keep track of your financial activities.</li>
+    <li><strong>Set Financial Goals:</strong> Plan and set goals to save for that dream vacation or a new car.</li>
+    <li><strong>Explore Insights:</strong> Dive into our reports and charts to gain insights into your spending patterns.</li>
+  </ol>
+
+  <p>We are committed to helping you achieve financial success and make informed financial decisions. If you have any questions or feedback, please don't hesitate to reach out to our support team.</p>
+
+  <p>Thank you for choosing our financial management application to manage your finances!</p>
+</div>
+
+<% if user_signed_in? %>
+  <!-- Display user information and a link to view transactions -->
+  <div class="text-center">
+    <p>Welcome, <%= current_user.email %></p>
+    <%# <%= link_to "View Transactions", transactions_path, class: 'btn btn-primary' %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+  </div>
+<% else %>
+  <!-- Display login and registration links -->
+  <div class="text-center">
+    <%# <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-success' %>
+    <%# <%= link_to "Log in", new_user_session_path, class: 'btn btn-primary' %>
+  </div>
+<% end %>
