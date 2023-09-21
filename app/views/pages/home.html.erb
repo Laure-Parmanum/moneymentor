@@ -1,89 +1,74 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner1.jpg') %>');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'header.png') %>');">
   <div class="container">
     <h1>Welcome to Moneymentor</h1>
     <p> Your partner for financial success, knowledge, and empowerment </p>
   </div>
 </div>
+
+
 <div class="features-section-container">
+
+
 <div class="features-section">
 
+<%= link_to balances_path do%>
+    <%= image_tag('balanceicon.png') %>
+<% end %>
+    <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
+</div>
 
-
-  <%= link_to balances_path do%>
-  <%= image_tag('balance.jpg') %>
-
-  <%= link_to balances_path do%>
-  <%= image_tag('balance.jpg') %>
-  <% end %>
-    <p>xxxxxxxxxxxxxxxx.</p>
-    </div>
 
 <div class="features-section">
-    <%= image_tag('balance.jpg') %>
-     <p>xxxxxxxxxxxxxxxx.</p>
+
+<%= link_to target_amounts_path do%>
+    <%= image_tag('Targeticon.png') %>
+<% end %>
+     <p>Saving money today secures a brighter tomorrow.</p>
 </div>
 
 <div class="features-section">
-    <%= image_tag('balance.jpg') %>
-     <p>xxxxxxxxxxxxxxxx.</p>
+
+    <%= image_tag('Transaction.png') %>
+
+     <p>Every transaction tells a story in the ledger of financial life.</p>
 </div>
 
+</div>
+
+<div class="features-section">
+
+    <%= image_tag('aboutus.jpg') %>
+
+     <p>Every transaction tells a story in the ledger of financial life.</p>
+</div>
+
+</div>
 
 <div class="footer">
   <h3>Moneymentor<span></span></h3>
 
-
-  <div class="footer-links-container">
-
-  <ul class="footer-links">
-				<li >	<a href="#">Home</a> </li>
-
-
-				<li>	<a href="#">About</a> </li>
-
-				<li>	<a href="#">Faq</a> </li>
-
-				<li>	<a href="#">Contact</a> </li>
-				</ul>
-
-
-<div class="footer">
-  <h3>Moneymentor<span></span></h3>
-  <div class="footer-links-container">
-
-  <ul class="footer-links">
-				<li >	<a href="#">Home</a> </li>
-
-				<li>	<a href="#">Blog</a> </li>
-
-				<li>	<a href="#">Pricing</a> </li>
-
-				<li>	<a href="#">About</a> </li>
-
-				<li>	<a href="#">Faq</a> </li>
-
-				<li>	<a href="#">Contact</a> </li>
-				</ul>
+<div class="footer-links-container">
 
 <div>
+      <li >	<a href="#">Home</a> </li>
+			<li>	<a href="#">About</a> </li>
+			<li>	<a href="#">Contact</a> </li>
+</div>
+
+  <div>
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
   </div>
+</div>
 
-  <div class="footer-copyright">
+
+
+<div class="footer-copyright">
 	<p class="footer-company-name">Moneymentor © 2023</p>
-  <%# <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
+</div>
 
-				<p class="footer-company-name">Moneymentor © 2023</p>
-  <%# <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
 
-  </div> %>
 </div>

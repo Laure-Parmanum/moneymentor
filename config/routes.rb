@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :balances do
-    resources :transactions, except: [:update, :destroy]
+    resources :transactions, only: [:new,:show]
   end
   resources :target_amounts
-  resources :transactions, only: [:update]
-
+  resources :transactions, only: [:index]
+  resources :balances, only: :create
 end
