@@ -2,8 +2,13 @@ class TargetAmountsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @targets = current_user.targets
-    @targets = TargetAmount.all
+    # @targets = current_user.TargetAmount.all
+    # @targets = TargetAmount.all
+    # @targets = TargetAmount.where(user_id: current_user.id)
+    @balances = Balance.all.where(user: current_user)
+    @targets = @balances.each do |balance|
+      balance.target_amounts
+    end
   end
 
   def show
@@ -51,13 +56,7 @@ class TargetAmountsController < ApplicationController
   end
 
   def target_params
-    params.require(:target).permit(:target_date, :target_amount, :balance_id, :status, :history_transaction)
+    params.require(:target).permit(:target_date, :target_amount, :balance_id, :status)
   end
-
-
-
-
-
-
 
 end

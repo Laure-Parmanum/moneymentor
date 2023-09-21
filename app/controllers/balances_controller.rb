@@ -1,5 +1,5 @@
 class BalancesController < ApplicationController
-  before_action :set_balance, only: [:show, :edit, :update]
+  # before_action :set_balance, only: [:show, :edit, :update]
 
   def index
     # @balances = current_user.balances
@@ -19,14 +19,14 @@ class BalancesController < ApplicationController
     @balance = Balance.new(balance_params)
     @balance.user = current_user
     if @balance.save
-      redirect_to balance_path(@balance), Notice: "Balance created"
+      redirect_to balance_path(@balance)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
-
+    
   end
 
 
@@ -45,6 +45,6 @@ class BalancesController < ApplicationController
   end
 
   def balance_params
-    params.require(:balance).permit(:current_balance, :account_number)
+    params.require(:balance).permit(:date, :current_balance, :account_number)
   end
 end
