@@ -1,13 +1,7 @@
 <h1>Create a new target</h1>
-<form>
-  <!-- Assuming :target_date and :target_amount are the input field names -->
-  <label for="target_date">Target Date:</label>
-  <input type="date" name="target_date" id="target_date">
-
-  <label for="target_amount">Target Amount:</label>
-  <input type="number" name="target_amount" id="target_amount">
-
-  <button type="submit">Submit</button>
-</form>
-
-<%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
+<%= simple_form_for([@target]) do |f| %>
+  <%= f.input :target_date %>
+  <%= f.input :target_amount %>
+  <%= f.button :submit %>
+<% end %>
+<%= console %>

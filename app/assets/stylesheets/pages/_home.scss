@@ -2,8 +2,9 @@
 .features-section-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 50px 0;
+  align-items: flex-start;
+  padding: 2px 0;
+  margin-top: 30px;
 }
 .feature {
   text-align: center;
@@ -16,7 +17,7 @@
 .features-section {
   width: 294px;
   img {
-    width: 100%;
+    width: 80%;
   }
   p a {
     text-decoration: none;
@@ -64,14 +65,14 @@
 }
 
 body {
-  background-color: rgb(118, 215, 237);
+  background-color: rgba(42, 61, 66, 0.522);
 }
 
 
 
 
 .footer {
-  background: #F4F4F4;
+  background: rgba(211, 58, 201, 0.285);
   // display: flex;
   // align-items: center;
   // justify-content: space-between;
@@ -79,13 +80,12 @@ body {
 
   padding: 0px 90px;
   color: rgba(0,0,0,0.3);
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 
   height: 170px;
-  // height: 100px;
+
 
   width: 100%;
   z-index: 1;

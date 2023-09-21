@@ -1,7 +1,8 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show]
   def index
-    @transactions = Balance.all
+    # @transactions = Transaction.all
+    @transactions = current_user.Transaction.all
   end
 
   def show
