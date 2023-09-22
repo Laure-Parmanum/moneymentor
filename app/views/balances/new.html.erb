@@ -1,11 +1,9 @@
 
-// to change to simple form
-
 <%= simple_form_for @balance do |f| %>
   <%= f.input :date %>
   <%= f.input :current_balance %>
   <%= f.input :account_number %>
-  <%= f.button :submit %>
-<% end %>
 
-<%= console %>
+  <%= f.submit %>
+  <%= link_to "Back to Balance", balances_path, class: "btn btn-primary" %>
+<% end %>

@@ -1,7 +1,21 @@
-<h1>Create a new target</h1>
-<%= simple_form_for([@target]) do |f| %>
-  <%= f.input :target_date %>
-  <%= f.input :target_amount %>
-  <%= f.button :submit %>
-<% end %>
-<%= console %>
+<div class="money-tracking-app">
+  <h1>Create a new target</h1>
+  <%= form_for(@target) do |f| %>
+    <div class="form-group">
+      <%= f.label :target_date %>
+      <%= f.date_field :target_date %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :target_amount %>
+      <%= f.text_field :target_amount %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+
+  <div class="button-group">
+    <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
+    <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>
+  </div>
+</div>

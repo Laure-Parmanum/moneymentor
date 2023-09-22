@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     # @targets = Target.all
     # @balances = Balance.all
   end
+
+  def about
+  end
 end
