@@ -1,11 +1,15 @@
 class BalancesController < ApplicationController
   # before_action :set_balance, only: [:show, :edit, :update]
 
+  # GET /balances
+  # This is where the user is directed when clicking on the balance icon on the hompeage
   def index
     # @balances = current_user.balances
+    # @balances = current_user.Balances.all - to recheck
     @balances = Balance.all
   end
 
+  # GET/balances/1
   def show
     @balances = Balance.all
     @targets = TargetAmount.all
@@ -26,7 +30,7 @@ class BalancesController < ApplicationController
   end
 
   def edit
-    
+
   end
 
 
