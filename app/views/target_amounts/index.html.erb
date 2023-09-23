@@ -16,7 +16,7 @@
     <tbody>
       <% @targets.each do |target| %>
         <tr>
-          <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
+          <%# <td><%= targetamout.target_date.strftime('%Y-%m-%d') %></td>
           <td><%= target.target_amount %></td>
           <td><%= target.status ? 'Completed' : 'Pending' %></td>
           <td>
