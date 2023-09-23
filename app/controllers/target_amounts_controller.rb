@@ -2,11 +2,24 @@ class TargetAmountsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update, :destroy]
 
   def index
+
     @targets = TargetAmount.all
 
      # code added by arnaud
      @remaining_amount = calculate_remaining_amount
      @target_data = generate_target_data
+
+
+    # @targets = current_user.TargetAmount.all
+    # @targets = TargetAmount.all
+    # @targets = TargetAmount.where(user_id: current_user.id)
+    @balances = Balance.all.where(user: current_user)
+    @targets = @balances.each do |balance|
+      balance.target_amounts
+    end
+    # to check code written by Arnaud ~ should be displayed in index
+    @remaining_amount = calculate_remaining_amount
+    @target_data = generate_target_data
 
   end
 
@@ -60,6 +73,9 @@ class TargetAmountsController < ApplicationController
 
    # code added by arnaud
    def calculate_remaining_amount
+
+ 
+
     # For example, summing up completed targets
     completed_targets = TargetAmount.where(status: true)
     total_completed_amount = completed_targets.sum(:target_amount)
