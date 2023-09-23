@@ -1,11 +1,16 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'header.png') %>');">
 
-# <%# <div class="banner">
-#   <div class="video-container">
+<%# <div class="banner">
+<section class="video_container">
+    <video src="video.mp4" autoplay loop muted></video>
+    <div class="overlay"></div>
+</section>
+
+  </div> %>
+<%# #   <div class="video-container">
 #   <video autoplay loop muted poster='header.png'>
 #       <source src='video.mp4' type="video/mp4">
-#     </video>
-#   </div> %>
+#     </video> %>
 
   <div class="container">
     <h1>Welcome to Moneymentor</h1>
@@ -46,7 +51,7 @@
 
 
        <%= image_tag('About us.png') %>
-      
+
        <p>At Moneymentor, we're not just about managing money; we're about empowering your financial journey.</p>
   </div>
 
