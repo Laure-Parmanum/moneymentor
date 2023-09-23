@@ -2,17 +2,15 @@ class TargetAmountsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @targets = current_user.TargetAmount.all
-    # @targets = TargetAmount.all
-    # @targets = TargetAmount.where(user_id: current_user.id)
-    @balances = Balance.all.where(user: current_user)
-    @targets = @balances.each do |balance|
-      balance.target_amounts
-    end
+    # # search all balances which belongs to the current user
+    # @balances = Balance.all.where(user: current_user)
+    # # search all target amounts which belongs to the balances created from current user
+    # @targets = TargetAmount.all.where(balance: @balances)
+    @targets = current_user.target_amounts.includes(:balance)
   end
 
   def show
-    @targets = TargetAmount.all
+
   end
 
   def new
@@ -21,10 +19,17 @@ class TargetAmountsController < ApplicationController
 
   # /targets
   def create
-    @target = TargetAmount.new(target_params)
+    # @target = TargetAmount.new(target_params)
 
+    # if @target.save
+    #   redirect_to @target, notice: 'Target was successfully created.'
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
+
+    @target = current_user.target_amounts.build(target_amount_params)
     if @target.save
-      redirect_to @target, notice: 'Target was successfully created.'
+      redirect_to new_starget_amount_path, notice: 'Target amount created!'
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,31 +37,38 @@ class TargetAmountsController < ApplicationController
 
   # /edit
   def edit
+
   end
 
   # update
   def update
-    if @target.update(target_params)
-      redirect_to @target, notice: 'Target was successfully updated.'
+    # if @target.update(target_params)
+    #   redirect_to @target, notice: 'Target was successfully updated.'
+    # else
+    #   render :edit, status: :unprocessable_entity
+    # end
+
+    if @target_amount.update(target_amount_params)
+      redirect_to target_amounts_path, notice: 'Target amount updated.'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
-  #/delete
+  # /delete
   def destroy
     @target.destroy
-    redirect_to target_amounts_url, notice: 'Target was successfully destroyed.'
+    redirect_to target_amounts_path, notice: 'Target was successfully destroyed.'
   end
 
   private
 
   def set_target
-    @target = TargetAmount.find(params[:id])
+    # @target = TargetAmount.find(params[:id])
+    @target = current_user.target_amounts.find(params[:id])
   end
 
   def target_params
-    params.require(:target).permit(:target_date, :target_amount, :balance_id, :status)
+    params.require(:target_amount).permit(:target_date, :target_amount, :balance_id, :status)
   end
-
 end

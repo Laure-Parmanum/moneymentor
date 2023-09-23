@@ -1,5 +1,32 @@
 <!-- app/views/targets/index.html.erb -->
 <h1>Targets</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @balances.each do |balance| %>
+        <ul>
+          <li><%= balance.account_number %></li>
+          <li><%=  balance.current_balance %></li>
+          <td><%=  %></td>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p>Remaining Amount: <%= @remaining_amount %></p>
 

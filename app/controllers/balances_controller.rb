@@ -1,14 +1,15 @@
 class BalancesController < ApplicationController
-  # before_action :set_balance, only: [:show, :edit, :update]
+  before_action :set_balance, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @balances = current_user.balances
-    @balances = Balance.all
+    # search for all balances which belongs to the current user
+    # @balances = Balance.all.where(user_id: current_user)
+    @balances = current_user.balances
   end
 
   def show
-    @balances = Balance.all
-    @targets = TargetAmount.all
+    # @balances = Balance.all
+    # @targets = TargetAmount.all
   end
 
   def new
@@ -26,7 +27,7 @@ class BalancesController < ApplicationController
   end
 
   def edit
-    
+
   end
 
 
@@ -38,6 +39,10 @@ class BalancesController < ApplicationController
     end
   end
 
+  def destroy
+    @balance.destroy
+    redirect_to balances_url, notice: "Balance was successfully destroyed.", status: :see_other
+  end
 
   private
   def set_balance
