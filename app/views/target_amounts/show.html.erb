@@ -2,6 +2,11 @@
 
 <div class="target-details">
   <div class="details-header">
+
+
+
+
+
     <h1>Target Details</h1>
     <p><strong>Remaining Balance:</strong> $<%= number_to_currency(@remaining_amount) %></p>
   </div>
@@ -12,10 +17,10 @@
         <p><strong>Target Date:</strong> <%= target.target_date %></p>
         <p><strong>Target Amount:</strong> $<%= target.target_amount %></p>
         <p><strong>Status:</strong> <%= target.status ? 'Completed' : 'Pending' %></p>
+        <p><strong>Action:</strong><%=target.action%></p>
       </li>
     <% end %>
   </ul>
 
   <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
 </div>
-

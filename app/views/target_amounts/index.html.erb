@@ -1,37 +1,50 @@
 <!-- app/views/targets/index.html.erb -->
-<h1>Targets</h1>
+<div style="background-image: url(/app/assets/images/saving.jpg); background-size: cover; background-repeat: no-repeat;">
+  <!-- Your content here -->
 
-<p>Remaining Amount: <%= @remaining_amount %></p>
 
-<% if @targets.any? %>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @targets.each do |target| %>
-        <tr>
-          <%# <td><%= targetamout.target_date.strftime('%Y-%m-%d') %></td>
-          <td><%= target.target_amount %></td>
-          <td><%= target.status ? 'Completed' : 'Pending' %></td>
-          <td>
-            <%= link_to 'Show', target %>
-            <%# <%= link_to 'Edit', edit_target_path(target) %>
-            <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
-        </tr>
+
+
+  <div class="target_amounts-container">
+    <div class="container-left">
+      <h1> START SAVING <br> YOUR MONEY <br> TODAY </h1>
+      <P> Your money is safe in our servers, so you <br> can relax while we can save your bills.</p>
+    </div>
+
+
+    <h2>Targets</h2>
+
+    <p>Remaining Amount: <%= @remaining_amount %></p>
+
+    <% if @targets.any? %>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @targets.each do |target| %>
+            <tr>
+              <%# <td><%= targetamout.target_date.strftime('%Y-%m-%d') %></td>
+              <td><%= target.target_amount %></td>
+              <td><%= target.status ? 'Completed' : 'Pending' %></td>
+              <td>
+                <%= link_to 'Show', target %>
+                <%# <%= link_to 'Edit', edit_target_path(target) %>
+                <%= link_to 'Delete', target, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p>No targets available.</p>
       <% end %>
-    </tbody>
-  </table>
-<% else %>
-  <p>No targets available.</p>
-  <% end %>
-  <%= link_to 'New Target', new_target_amount_path %>
+      <%= link_to 'New Target', new_target_amount_path, class: "path_target" %>
 
-<%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>
-
+  </div>
+</div>

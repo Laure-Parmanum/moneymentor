@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'header.png') %>');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'american.jpg') %>');">
 
 <%# <div class="banner">
 <section class="video_container">
@@ -12,7 +12,7 @@
 #       <source src='video.mp4' type="video/mp4">
 #     </video> %>
 
-  <div class="container">
+  <div class="container-left">
     <h1>Welcome to Moneymentor</h1>
     <p> Your partner for financial success, knowledge, and empowerment </p>
   </div>
@@ -22,7 +22,7 @@
 <div class="features-section-container">
 
 
-  <div class="features-section">
+  <div class="features-section div1">
 
     <%= link_to balances_path do%>
         <%= image_tag('balanceicon.png') %>
@@ -31,7 +31,7 @@
   </div>
 
 
-  <div class="features-section">
+  <div class="features-section div2">
     <%= link_to target_amounts_path do%>
         <%= image_tag('Targeticon.png') %>
     <% end %>
@@ -39,7 +39,7 @@
   </div>
 
 
-  <div class="features-section">
+  <div class="features-section div3">
 
         <%= image_tag('Transaction.png') %>
 
@@ -47,8 +47,7 @@
   </div>
 
 
-  <div class="features-section">
-
+  <div class="features-section div4">
 
        <%= image_tag('About us.png') %>
 
@@ -56,7 +55,6 @@
   </div>
 
 </div>
-
 
 
   <div class="footer">
@@ -78,7 +76,6 @@
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
-
 
 
 <div class="footer-copyright">
