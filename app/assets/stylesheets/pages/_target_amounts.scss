@@ -1,9 +1,9 @@
 
 .money-tracking-app {
   max-width: 400px;
-  margin: 0 auto;
+  margin-top: 40px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(212, 146, 219);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -69,13 +69,14 @@
 
 /* Background image for the entire page */
 body {
-  background-image: url('https://www.photos-public-domain.com/wp-content/uploads/2018/03/american-money-bills-and-coins.jpg'); // Provide the path to your background image
+  // background-image: url('https://www.photos-public-domain.com/wp-content/uploads/2018/03/american-money-bills-and-coins.jpg'); // Provide the path to your background image
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-family: Arial, sans-serif; // Choose an appropriate font
   margin: 0;
   padding: 0;
+  background-color: #440496;
 }
 
 
@@ -138,3 +139,36 @@ body {
     }
   }
 }
+
+.target_amounts-container{
+  padding: 0 40px;
+  margin-top: 90px;
+  h1{
+    color: #fffdfd;
+    font: CoFo Sans;
+    font-size: 60px;
+  }
+  p{
+    color: #fffdfd;
+    font: CoFo Sans;
+    font-size: 20px;
+  }
+  h2{
+    color: #fffdfd;
+    font: CoFo Sans;
+    font-size: 30px;
+    padding-top: 30px;
+  }
+}
+
+.path_target{
+  color: white;
+  background-color: #0D6EFD;
+  padding: 10px 20px;
+}
+
+// .background-container{
+//   background-size: cover;
+//   background-position: center;
+//   background-image: url(/app/assets/images/saving.jpg);
+// }

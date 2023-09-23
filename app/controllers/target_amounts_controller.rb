@@ -33,13 +33,13 @@ class TargetAmountsController < ApplicationController
 
   # /targets
   def create
-    @target = TargetAmount.new(target_params)
+    @target = TargetAmount.create(target_params)
 
-    if @target.save
-      redirect_to @target, notice: 'Target was successfully created.'
-    else
-      render :new, status: :unprocessable_entity
-    end
+    # if @target.save
+    #   redirect_to @target, notice: 'Target was successfully created.'
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   # /edit
@@ -68,13 +68,13 @@ class TargetAmountsController < ApplicationController
   end
 
   def target_params
-    params.require(:target).permit(:target_date, :target_amount, :balance_id, :status)
+    params.require(:target).permit(:target_date, :target_amount, :status)
   end
 
    # code added by arnaud
    def calculate_remaining_amount
 
- 
+
 
     # For example, summing up completed targets
     completed_targets = TargetAmount.where(status: true)

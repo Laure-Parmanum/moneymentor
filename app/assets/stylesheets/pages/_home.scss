@@ -1,10 +1,9 @@
 // Specific CSS for your home-page
 .features-section-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: flex-start;
   padding: 2px 0;
-  margin-top: 30px;
 }
 .feature {
   text-align:center;
@@ -13,15 +12,22 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 .features-section {
   width: 294px;
   img {
     width: 80%;
+    padding-left: 50px;
   }
-  p a {
+  p {
     text-decoration: none;
-    color: #ddd;
+    color: #f3f3f3;
+    font-size: 20px;
+    font: forum;
+    padding-left: 50px;
+    margin-bottom: 20px;
+
   }
 }
 .feature img {
@@ -33,11 +39,20 @@
 }
 .feature p {
   margin-top: 10px;
+
 }
 .icon {
   font-size: 36px;
   color: #0D6EFD;
   margin-top: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2px 0;
+  margin-top: 30px;
 }
 
 .banner {
@@ -111,7 +126,7 @@ body {
 
 
 .footer {
-  background: rgba(211, 58, 201, 0.285);
+  background: #06bdc4c7;
   // display: flex;
   // align-items: center;
   // justify-content: space-between;
@@ -168,8 +183,8 @@ body {
 
 
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   min-height: 100vh;
   margin: 0;
 }
@@ -181,3 +196,27 @@ body {
 .footer-container {
   margin-top: auto;
 }
+
+
+
+
+
+
+
+.features-section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+
+
+  }
+
+  .div1 { grid-area: 1 / 1 / 2 / 2; }
+  .div2 { grid-area: 1 / 2 / 2 / 3; }
+  .div3 { grid-area: 1 / 3 / 2 / 4; }
+  .div4 { grid-area: 2 / 1 / 3 / 4; }
