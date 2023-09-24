@@ -1,1 +1,15 @@
-<h1>testS</h1>
+<h1>new transaction</h1>
+<div class = "container vh-100 py-5 mb-5">
+    <div class="bg-white shadow" >
+      <%= simple_form_for @transaction do |f| %>
+      <%= f.input :transaction_type, collection: ['Debit', 'Credit'], prompt: "Select type" %>
+        <%= f.input :date %>
+        <%= f.input :description %>
+        <%= f.select :balance_id, options_for_select(@balances.map { |balance| [balance.id, balance.id] }) %>
+        <%= f.input :amount %>
+        <%= f.input :category %>
+        <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+</div>

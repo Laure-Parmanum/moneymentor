@@ -101,7 +101,7 @@ TargetAmount.destroy_all
 Balance.destroy_all
 User.destroy_all
 
-
+balances_for_target_amounts = []
 # Create 5 sample users with associated data
 puts 'Creating sample data...'
 5.times do
@@ -119,13 +119,9 @@ puts 'Creating sample data...'
     account_number: Faker::Number.unique.number(digits: 8),
     user: user
   )
+
   # Create a target amount for each balance
-  target_amount = TargetAmount.create(
-    target_date: Faker::Date.forward(days: 30),
-    target_amount: Faker::Number.decimal(l_digits: 2),
-    status: ['achieve', 'not achieve'].sample,
-    balance: balance
-  )
+  balances_for_target_amounts << balance
   # Create random transactions for each balance
   5.times do
     transaction_type = ['Debit', 'Credit'].sample
@@ -146,4 +142,15 @@ puts 'Creating sample data...'
     )
   end
 end
+
+for amount in balances_for_target_amounts
+  target_amount = TargetAmount.new(
+    target_date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+    target_amount: Faker::Number.within(range: 1000..10000),
+    status: ['Achieved', 'Not Achieved'].sample,
+    balance: amount,
+  )
+  target_amount.save!
+end
+
 puts 'Sample data created successfully!'

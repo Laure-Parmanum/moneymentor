@@ -5,9 +5,14 @@
     <div class="col">
       <% @transactions.each do |transaction| %>
         <ul>
+        <li><%= transaction.id %></li>
           <li><%= transaction.amount %></li>
           <li><%=  transaction.transaction_type %></li>
-          <td><%=  %></td>
+          <li><%=  transaction.balance_id %></li>
+          </li>
+
+          <%= link_to 'Edit', edit_transaction_path(transaction) %>
+          <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %>
         </ul>
       <% end %>
     </div>
