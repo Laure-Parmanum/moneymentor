@@ -4,7 +4,6 @@
 
 
 
-
   <div class="target_amounts-container">
     <div class="container-left">
       <h1> START SAVING <br> YOUR MONEY <br> TODAY </h1>
@@ -14,7 +13,7 @@
 
     <h2>Targets</h2>
 
-    <p>Remaining Amount: <%= @remaining_amount %></p>
+
 
     <% if @targets.any? %>
       <table>
@@ -42,7 +41,7 @@
         </tbody>
       </table>
     <% else %>
-      <p>No targets available.</p>
+      <h3>No targets available <br>Remaining Amount: <%= @remaining_amount %></h3>
       <% end %>
       <%= link_to 'New Target', new_target_amount_path, class: "path_target" %>
 
