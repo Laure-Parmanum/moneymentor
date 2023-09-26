@@ -1,0 +1,12 @@
+<div class = "container vh-100 py-5 mb-5">
+  <h4 class= "text-center mb-5">Updating my booking for <%= @target.target_date.strftime('%Y-%m-%d') %> </h4>
+    <div class="bg-white shadow" >
+      <%= simple_form_for @target do |f| %>
+        <%= f.input :target_date %>
+        <%= f.input :target_amount %>
+        <%= f.collection_select :balance_id, current_user.balances, :id, :account_number, prompt: "Select a balance" %>
+        <%= f.input :status, collection: ['Achieved', 'Not Achieved'], prompt: "Select status" %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+</div>

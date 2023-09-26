@@ -1,1 +1,17 @@
 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @balances.each do |balance| %>
+        <ul>
+          <li><%= balance.account_number %></li>
+          <li><%=  balance.current_balance %></li>
+          <td><%=  %></td>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+=======
+
+
