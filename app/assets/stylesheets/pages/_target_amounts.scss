@@ -226,4 +226,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+  }
+
+  .center-text {
+    text-align: center; /* Center the text horizontally */
+  }
+
+  .center-text p {
+    font-size: 30px; /* Adjust the font size as needed */
   }
