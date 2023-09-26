@@ -1,12 +1,16 @@
 class BalancesController < ApplicationController
   before_action :set_balance, only: [:show, :edit, :update, :destroy]
 
+  # GET /balances
+  # This is where the user is directed when clicking on the balance icon on the hompeage
   def index
     # search for all balances which belongs to the current user
     # @balances = Balance.all.where(user_id: current_user)
     @balances = current_user.balances
+
   end
 
+  # GET/balances/1
   def show
     # @balances = Balance.all
     # @targets = TargetAmount.all

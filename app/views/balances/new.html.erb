@@ -1,11 +1,18 @@
 
-// to change to simple form
-
 <%= simple_form_for @balance do |f| %>
   <%= f.input :date %>
   <%= f.input :current_balance %>
   <%= f.input :account_number %>
-  <%= f.button :submit %>
+
+
+  <%= f.submit %>
+  <%= link_to "Back to Balance", balances_path, class: "btn btn-primary" %>
 <% end %>
 
-<%= console %>
+
+
+
+<%# <div>Here, there should be a form so the user can create a new account</div> %>
+<%# <div>Message that account is correctly created and renders show page</div> %>
+<%# <div>balance_path(@balance)</div> %>
+

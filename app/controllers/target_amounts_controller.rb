@@ -7,6 +7,10 @@ class TargetAmountsController < ApplicationController
     # search all target amounts which belongs to the balances created from current user
     @targets = TargetAmount.all.where(balance: @balances)
     # @targets = current_user.target_amounts.includes(:balance)
+
+#     to check code written by Arnaud ~ should be displayed in index
+#     @remaining_amount = calculate_remaining_amount
+#     @target_data = generate_target_data
   end
 
   def show
