@@ -47,6 +47,13 @@
   }
 }
 
+// For Page New form
+.form-container {
+  background-color: white;
+  padding: 20px; /* Add padding for spacing */
+}
+
+
 .button-group {
   text-align: center;
   margin-top: 20px;
@@ -216,7 +223,7 @@ body {
 
 
       p {
-        font-size: 30px; /* font size as needed */
+        font-size: 30px; 
       }
     }
   }
@@ -230,9 +237,9 @@ body {
   }
 
   .center-text {
-    text-align: center; /* Center the text horizontally */
+    text-align: center;
   }
 
   .center-text p {
-    font-size: 30px; /* Adjust the font size as needed */
+    font-size: 30px;
   }

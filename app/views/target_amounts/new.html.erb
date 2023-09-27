@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <title>Create a New Target</title>
@@ -6,11 +6,9 @@
 <body class="custom-background">
 <div class="center-text">
     <p>The easiest way to save your money is to set a target.</p>
-  </div>
-<div class="money-tracking-app">
-
+</div>
+<div class="money-tracking-app form-container"> <!-- Added form-container class -->
   <p>Set financial goals, track your progress, and make your dreams a reality. Start by creating a new target below.</p>
-
   <h1>Create a new target</h1>
   <%= form_for(@target) do |f| %>
     <div class="form-group">
@@ -32,13 +30,10 @@
   </div>
 </div>
 
-
-
 <%# Insert a banner at the end %>
 <div class="new_banner">
   <%# <img src="https://target.scene7.com/is/image/Target/102417_TargetApp_SH_WEB-m-211006-1633527784673?wid=668&amp;qlt=80&amp;fmt=webp" alt=""> %>
   <div class="text">
-
   </div>
 </div>
 

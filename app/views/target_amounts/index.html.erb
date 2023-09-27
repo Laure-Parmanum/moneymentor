@@ -1,35 +1,46 @@
 <!-- app/views/targets/index.html.erb -->
-<h1>Targets amuont</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Targets Amount</title>
+  </head>
+<body class="custom-background">
+  <div class="container">
+    <div class="center-text">
+      <h1>Targets Amount</h1>
 
-<% if @targets.any? %>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @targets.each do |target| %>
-        <tr>
-          <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
-          <td><%= target.target_amount %></td>
-          <td><%= target.status %></td>
-          <td>
-          <%= link_to 'Show', target %>
-          <%= link_to 'Edit', edit_target_amount_path(target) %>
-          <%= link_to 'Delete', target_amount_path(target), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
-          </td>
-        </tr>
+      <% if @targets.any? %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @targets.each do |target| %>
+              <tr>
+                <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
+                <td><%= target.target_amount %></td>
+                <td><%= target.status %></td>
+                <td>
+                  <%= link_to 'Show', target, class: 'btn btn-info' %>
+                  <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-warning' %>
+                  <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No targets available.</p>
       <% end %>
-    </tbody>
-  </table>
-<% else %>
-  <p>No targets available.</p>
-  <% end %>
-  <%= link_to 'New Target', new_target_amount_path %>
 
-<%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>
-
+      <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-success' %>
+      <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
+    </div>
+  </div>
+</body>
+</html>
