@@ -1,15 +1,26 @@
 <!-- app/views/targets/show.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Target Details</title>
+</head>
+<body class="custom-background">
+  <div class="container">
+    <div class="center-text">
+      <h1>Target Details</h1>
+      <p><strong>Remaining Balance:</strong> $<%= number_to_currency(@remaining_amount) %></p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p><strong>Target Date:</strong> <%= @target.target_date %></p>
+          <p><strong>Target Amount:</strong> $<%= @target.target_amount %></p>
+          <p><strong>Status:</strong> <%= @target.status %></p>
+        </li>
+      </ul>
+    </div>
 
-<h1>Target Details</h1>
-<p><strong>Remaining Balance:</strong> $<%= number_to_currency(@remaining_amount) %></p>
-<ul>
-    <li>
-      <p><strong>Target Date:</strong> <%= @target.target_date %></p>
-      <p><strong>Target Amount:</strong> $<%= @target.target_amount %></p>
-      <p><strong>Status:</strong> <%= @target.status %></p>
-    </li>
-
-</ul>
-
-<%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
-
+    <div class="button-group">
+      <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary mt-3' %>
+    </div>
+  </div>
+</body>
+</html>
