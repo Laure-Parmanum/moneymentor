@@ -1,20 +1,47 @@
-<h1>This is our transaction view testing</h1>
-<h1>Targets</h1>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <% @transactions.each do |transaction| %>
-        <ul>
-        <li><%= transaction.id %></li>
-          <li><%= transaction.amount %></li>
-          <li><%=  transaction.transaction_type %></li>
-          <li><%=  transaction.balance_id %></li>
-          </li>
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add Bootstrap CSS link here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-4"> Transactions view</h1>
 
-          <%= link_to 'Edit', edit_transaction_path(transaction) %>
-          <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </ul>
-      <% end %>
-    </div>
+    <h2>Targets</h2>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Transaction Type</th>
+          <th>Balance ID</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.id %></td>
+            <td><%= transaction.amount %></td>
+            <td><%= transaction.transaction_type %></td>
+            <td><%= transaction.balance_id %></td>
+            <td>
+              <%= link_to 'Edit', edit_transaction_path(transaction), class: 'btn btn-primary btn-sm' %>
+              <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-</div>
+
+  <!-- Add Bootstrap JS and jQuery script links here if needed -->
+  <!--
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  -->
+</body>
+</html>
