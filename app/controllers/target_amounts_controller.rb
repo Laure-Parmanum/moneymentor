@@ -2,63 +2,55 @@ class TargetAmountsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update, :destroy]
 
   def index
-
-    @targets = TargetAmount.all
-
-     # code added by arnaud
-     @remaining_amount = calculate_remaining_amount
-     @target_data = generate_target_data
-
-
-    # @targets = current_user.TargetAmount.all
-    # @targets = TargetAmount.all
-    # @targets = TargetAmount.where(user_id: current_user.id)
+    # search all balances which belongs to the current user
     @balances = Balance.all.where(user: current_user)
-    @targets = @balances.each do |balance|
-      balance.target_amounts
-    end
-    # to check code written by Arnaud ~ should be displayed in index
-    @remaining_amount = calculate_remaining_amount
-    @target_data = generate_target_data
+    # search all target amounts which belongs to the balances created from current user
+    @targets = TargetAmount.all.where(balance: @balances)
+    # @targets = current_user.target_amounts.includes(:balance)
 
+#     to check code written by Arnaud ~ should be displayed in index
+#     @remaining_amount = calculate_remaining_amount
+#     @target_data = generate_target_data
   end
 
   def show
-    @targets = TargetAmount.all
+
   end
 
   def new
     @target = TargetAmount.new
+    @target.status = 'Not Achieved'
   end
 
   # /targets
   def create
-    @target = TargetAmount.create(target_params)
+    @target = TargetAmount.new(target_params)
 
-    # if @target.save
-    #   redirect_to @target, notice: 'Target was successfully created.'
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    if @target.save
+      redirect_to target_amounts_path, notice: 'Target amount created!'
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # /edit
   def edit
+
   end
 
   # update
   def update
     if @target.update(target_params)
-      redirect_to @target, notice: 'Target was successfully updated.'
+      redirect_to target_amounts_path, notice: 'Target was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
-  #/delete
+  # /delete
   def destroy
     @target.destroy
-    redirect_to target_amounts_url, notice: 'Target was successfully destroyed.'
+    redirect_to target_amounts_path, status: :see_other
   end
 
   private
@@ -68,36 +60,6 @@ class TargetAmountsController < ApplicationController
   end
 
   def target_params
-    params.require(:target).permit(:target_date, :target_amount, :status)
-  end
-
-   # code added by arnaud
-   def calculate_remaining_amount
-
-
-
-    # For example, summing up completed targets
-    completed_targets = TargetAmount.where(status: true)
-    total_completed_amount = completed_targets.sum(:target_amount)
-    total_target_amount = TargetAmount.sum(:target_amount)
-    remaining_amount = total_target_amount - total_completed_amount
-    return remaining_amount
-  end
-
-  def generate_target_data
-    # Generate data for the chart
-
-    target_labels = []
-    target_data = []
-
-    @targets.each do |target|
-      target_labels << target.target_date.strftime('%Y-%m-%d')
-      target_data << target.target_amount
-    end
-
-    {
-      labels: target_labels,
-      data: target_data
-    }
+    params.require(:target_amount).permit(:id, :target_date, :target_amount, :balance_id, :status)
   end
 end

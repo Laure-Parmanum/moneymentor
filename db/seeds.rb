@@ -41,52 +41,116 @@
 
 
 
+# Transaction.destroy_all
+# Balance.destroy_all
+# User.destroy_all
+# # Create a test user
+# user = User.create(
+#   email: 'test@example.com',
+#   password: "password",
+#   first_name: 'Test',
+#   last_name: 'User',
+#   date_of_birth: DateTime.new(1990, 1, 1)
+# )
+# # Create a test balance for the user
+# balance = Balance.create(
+#   date: Date.today,
+#   current_balance: 1000.0,
+#   user: user,
+#   account_number: 1234567890
+# )
+# # Create test debit and credit transactions
+# debit_transaction = Transaction.create(
+#   date: Date.today,
+#   amount: 500.0, # Debit amount (positive)
+#   description: 'Test Debit',
+#   payment_method: 'Credit Card',
+#   category: 'Expense',
+#   balance: balance,
+#   currency: 'USD',
+#   transaction_type: 'debit'
+# )
+# credit_transaction = Transaction.create(
+#   date: Date.today,
+#   amount: 300.0, # Credit amount (negative)
+#   description: 'Test Credit',
+#   payment_method: 'Bank Transfer',
+#   category: 'Income',
+#   balance: balance,
+#   currency: 'USD',
+#   transaction_type: 'credit'
+# )
+
+# # Create test target amount
+
+# target_amount = TargetAmount.create!(
+#   target_date: Date.today,
+#   target_amount: 50000,
+#   status: "not acheived",
+#   balance: balance
+#   )
+#   puts 'Seed data created successfully.'
+
+require 'faker'
+
+# Clear the database before seeding
+puts 'Clearing the database...'
+
 Transaction.destroy_all
+TargetAmount.destroy_all
 Balance.destroy_all
 User.destroy_all
-# Create a test user
-user = User.create(
-  email: 'test@example.com',
-  password: "password",
-  first_name: 'Test',
-  last_name: 'User',
-  date_of_birth: DateTime.new(1990, 1, 1)
-)
-# Create a test balance for the user
-balance = Balance.create(
-  date: Date.today,
-  current_balance: 1000.0,
-  user: user,
-  account_number: 1234567890
-)
-# Create test debit and credit transactions
-debit_transaction = Transaction.create(
-  date: Date.today,
-  amount: 500.0, # Debit amount (positive)
-  description: 'Test Debit',
-  payment_method: 'Credit Card',
-  category: 'Expense',
-  balance: balance,
-  currency: 'USD',
-  transaction_type: 'debit'
-)
-credit_transaction = Transaction.create(
-  date: Date.today,
-  amount: 300.0, # Credit amount (negative)
-  description: 'Test Credit',
-  payment_method: 'Bank Transfer',
-  category: 'Income',
-  balance: balance,
-  currency: 'USD',
-  transaction_type: 'credit'
-)
 
-# Create test target amount
-
-target_amount = TargetAmount.create!(
-  target_date: Date.today,
-  target_amount: 50000,
-  status: "not acheived",
-  balance: balance
+balances_for_target_amounts = []
+# Create 5 sample users with associated data
+puts 'Creating sample data...'
+5.times do
+  user = User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: 'password',  # Set a default password for simplicity
+    date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65)
   )
-  puts 'Seed data created successfully.'
+  # Create a balance for each user
+  balance = Balance.create(
+    date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+    current_balance: Faker::Number.decimal(l_digits: 2),
+    account_number: Faker::Number.unique.number(digits: 8),
+    user: user
+  )
+
+  # Create a target amount for each balance
+  balances_for_target_amounts << balance
+  # Create random transactions for each balance
+  5.times do
+    transaction_type = ['Debit', 'Credit'].sample
+    amount = Faker::Number.decimal(l_digits: 2)
+    currency = 'USD'
+    category = Faker::Lorem.word
+    description = Faker::Lorem.sentence
+    payment_method = ['Credit Card', 'Cash', 'Bank Transfer'].sample
+    Transaction.create(
+      date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+      amount: amount,
+      description: description,
+      payment_method: payment_method,
+      category: category,
+      currency: currency,
+      transaction_type: transaction_type,
+      balance: balance
+    )
+  end
+end
+
+for amount in balances_for_target_amounts
+  target_amount = TargetAmount.new(
+    target_date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+    target_amount: Faker::Number.within(range: 1000..10000),
+    status: ['Achieved', 'Not Achieved'].sample,
+    balance: amount,
+  )
+  target_amount.save!
+end
+
+puts 'Sample data created successfully!'

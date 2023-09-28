@@ -2,6 +2,7 @@
   <h1 class="header__title">Credit Card</h1>
 </header>
 
+
 <div class="panel-container">
   <div class="card card--front">
     <div class="card__number">4111 1111 1111 1111</div>
@@ -49,3 +50,21 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @balances.each do |balance| %>
+        <ul>
+          <li><%= balance.account_number %></li>
+          <li><%=  balance.current_balance %></li>
+          <td><%=  %></td>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

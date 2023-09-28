@@ -80,3 +80,6 @@ gem "cloudinary"
 
 #(laure) setupcloundinary
 gem "dotenv-rails", groups: [:development, :test]
+
+
+gem "faker"
