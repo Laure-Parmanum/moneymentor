@@ -1,0 +1,27 @@
+
+body {
+  font: 16px "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 100vh;
+  background: #440496;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+}
+// --- links ------------------------------------------------------------------
+
+a {
+  color: #000;
+}
