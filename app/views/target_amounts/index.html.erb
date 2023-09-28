@@ -1,13 +1,12 @@
 <!-- app/views/targets/index.html.erb -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Targets Amount</title>
-  </head>
+
 <body class="custom-background">
   <div class="container">
     <div class="center-text">
       <h1>Targets Amount</h1>
+
+<h1>Targets amount</h1>
+
 
       <% if @targets.any? %>
         <table class="table">
@@ -38,9 +37,19 @@
         <p>No targets available.</p>
       <% end %>
 
+
       <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-success' %>
       <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
     </div>
   </div>
-</body>
-</html>
+
+
+    </tbody>
+  </table>
+<% else %>
+  <p>No targets available.</p>
+  <% end %>
+  <%= link_to 'New Target', new_target_amount_path %>
+
+<%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>
+

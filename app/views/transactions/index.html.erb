@@ -1,0 +1,60 @@
+
+
+<%# <h1>This is our transaction view testing</h1> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://c0.wallpaperflare.com/preview/76/901/117/accounting-aerial-application-bankbook.jpg);">
+  <div class="container">
+    <h1>Your transactions</h1>
+    <a class="btn btn-flat" href="#">Start saving</a>
+  </div>
+</div>
+
+<h1>Targets</h1>
+<div class="container">
+  <%# <div class="row">
+    <div class="col"> %>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Transaction ID</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Transaction type</th>
+      <th scope="col">Balance ID</th>
+      <th scope="col">Detail</th>
+    </tr>
+  </thead>
+      <% @transactions.each do |transaction| %>
+    <tbody>
+    <tr>
+        <th scope="row"><%= transaction.id %></th>
+          <td><%= transaction.amount %></td>
+          <td><%=  transaction.transaction_type %></td>
+          <td><%=  transaction.balance_id %></td>
+          <td><%= link_to 'View transaction', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <!-- <%= link_to 'Edit', edit_transaction_path(transaction) %>
+          <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+    <%# </div>
+  </div> %>
+</div>
+
+<style>
+</style>
+
+   <!-- <% @transactions.each do |transaction| %>
+        <ul>
+        <li>Id <%= transaction.id %></li>
+          <li>Amount <%= transaction.amount %></li>
+          <li>Transaction type <%=  transaction.transaction_type %></li>
+          <li>Balance Id <%=  transaction.balance_id %></li>
+          </li>
+          <%= link_to 'View transaction', transaction, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+         <%= link_to 'Edit', edit_transaction_path(transaction) %>
+          <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </ul>
+      <% end %> -->
+
