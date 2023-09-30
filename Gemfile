@@ -83,3 +83,8 @@ gem "dotenv-rails", groups: [:development, :test]
 
 
 gem "faker"
+
+#(laure) setup graph gem
+gem "chartkick"
+
+gem "importmap-rails", "~> 1.2"

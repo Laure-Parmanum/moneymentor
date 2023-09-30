@@ -1,29 +1,25 @@
 
 <div class="targetamount_container_new">
 <div class="center-text">
-    <p>The easiest way to save your money is to set a target.</p>
+    <%# <p>The easiest way to save your money is to set a target.</p> %>
+    <p class="display-4">Set Your Financial Goals Today!</p>
+    <p class="lead">The easiest way to save your money is to set a target.</p>
 </div>
 <div class="money-tracking-app form-container"> <!-- Added form-container class -->
   <p>Set financial goals, track your progress, and make your dreams a reality. Start by creating a new target below.</p>
   <h1>Create a new target</h1>
-  <%= form_for(@target) do |f| %>
-    <div class="form-group">
-      <%= f.label :target_date %>
-      <%= f.date_field :target_date %>
-    </div>
+ <%= simple_form_for(@target) do |f| %>
+      <%# <%= f.association :balance %>
+      <%=f.association :balance, label_method: :current_balance, value_method: :id, include_blank: false %>
+            <%= f.input :target_date %>
+      <%= f.input :status, collection: [ "Not Archived", "Archived"] %>
+      <%= f.input :target_amount %>
+      <div class="button-group">
+        <%= f.submit'Submit', class: 'btn btn-secondary' %>
+        <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
 
-    <div class="form-group">
-      <%= f.label :target_amount %>
-      <%= f.text_field :target_amount %>
-    </div>
-
-    <%= f.submit %>
-  <% end %>
-
-  <div class="button-group">
-    <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-secondary' %>
-    <%# <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary' %>
-  </div>
 </div>
 
 <%# Insert a banner at the end %>

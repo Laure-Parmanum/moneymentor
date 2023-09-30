@@ -1,1 +1,8 @@
 <h1>show</h1>
+<%= cl_image_tag @transaction.photo.key, height: 300, width: 400, crop: :fill %>
+
+<p>Below are the details of your selected transactions </p>
+  <%= @transaction.amount %>
+  <%= @transaction.transaction_type %>
+  <%= @transaction.balance_id %>
+

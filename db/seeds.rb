@@ -127,7 +127,8 @@ puts 'Creating sample data...'
     transaction_type = ['Debit', 'Credit'].sample
     amount = Faker::Number.decimal(l_digits: 2)
     currency = 'USD'
-    category = Faker::Lorem.word
+    # category = Faker::Lorem.word
+    category = ["Rent", "Utilities", "Groceries", "Others"].sample
     description = Faker::Lorem.sentence
     payment_method = ['Credit Card', 'Cash', 'Bank Transfer'].sample
     Transaction.create(

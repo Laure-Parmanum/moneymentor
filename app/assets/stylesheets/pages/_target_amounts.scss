@@ -1,9 +1,24 @@
 .targetamounts_container-index {
   background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .container__container {
+    display: flex;
+    gap: 40px;
+  }
+  .links__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .links__container > * {
+    margin: 0 !important;
+  }
+  .container--right, .container {
+    width: 50%;
+  }
   .money-tracking-app {
     max-width: 400px;
     margin-top: 100px;
@@ -12,23 +27,19 @@
     background-color:white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   margin-left: 550px;
-
+    margin-left: 550px;
     h1 {
       text-align: center;
       margin-bottom: 20px;
       color: #333;
     }
-
     .form-group {
       margin-bottom: 15px;
-
       label {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
       }
-
       input[type="text"],
       input[type="date"] {
         width: 100%;
@@ -37,9 +48,8 @@
         border-radius: 4px;
       }
     }
-
     input[type="submit"] {
-      background-color: #007bff; // Primary button color
+      background-color: #007BFF; // Primary button color
       color: white;
       padding: 10px 15px;
       border: none;
@@ -47,12 +57,13 @@
       cursor: pointer;
       font-weight: bold;
     }
-
     input[type="submit"]:hover {
-      background-color: #0056b3; // Darker shade for hover effect
+      background-color: #0056B3; // Darker shade for hover effect
     }
   }
-
+  .center-text {
+    text-align: center;
+  }
 }
 
 
@@ -66,6 +77,8 @@
 .form-container {
   background-color: white;
   padding: 20px; /* Add padding for spacing */
+  max-width: 700px;
+  margin: auto;
 }
 
 
@@ -90,6 +103,9 @@
   }
 }
 
+.center-text {
+  text-align: center;
+}
 }
 
 
@@ -249,9 +265,10 @@
 
 }
 
+.targetamout_container_edit {
+  background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-
-
-
-
-/*target_details.scss */
+}

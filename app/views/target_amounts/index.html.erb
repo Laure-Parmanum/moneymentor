@@ -1,48 +1,45 @@
-<!-- app/views/targets/index.html.erb -->
-
 <div class="targetamounts_container-index">
-  <div class="container">
-    <div class="center-text">
-
- <h1>Targets amount</h1>
-
-      <% if @targets.any? %>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Amount</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @targets.each do |target| %>
+  <div class="container__container">
+    <div class="container">
+      <div class="center-text">
+        <h1>Targets amount</h1>
+        <% if @targets.any? %>
+          <table class="table">
+            <thead>
               <tr>
-                <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
-                <td><%= target.target_amount %></td>
-                <td><%= target.status %></td>
-                <td>
-                  <%= link_to 'Show', target, class: 'btn btn-info' %>
-                  <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-warning' %>
-                  <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-                </td>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% else %>
-        <p>No targets available.</p>
-      <% end %>
-
-
-      <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-success' %>
-      <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
+            </thead>
+            <tbody>
+              <% @targets.each do |target| %>
+                <tr>
+                  <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
+                  <td><%= target.target_amount %></td>
+                  <td><%= target.status %></td>
+                  <td>
+                    <%= link_to 'Show', target, class: 'btn btn-info' %>
+                    <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-warning' %>
+                    <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p>No targets available.</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="container--right">
+      <h1>Set inspiring goals today and transform your dreams into <strong>Reality</strong> </h1>
+       <img src="https://cdn.pixabay.com/photo/2017/06/04/20/48/vision-2372177_1280.jpg" alt="Vision Image" class="img-fluid">
     </div>
   </div>
-
-
-    </tbody>
-  </table>
-
+  <div class="links__container">
+    <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-success' %>
+    <%# <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
+  </div>
 </div>
