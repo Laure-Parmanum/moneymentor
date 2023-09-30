@@ -7,6 +7,7 @@ class BalancesController < ApplicationController
     # search for all balances which belongs to the current user
     # @balances = Balance.all.where(user_id: current_user)
     @balances = current_user.balances
+  
 
   end
 
