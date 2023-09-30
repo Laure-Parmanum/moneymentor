@@ -9,6 +9,42 @@ class TransactionsController < ApplicationController
      # Search all balances belonging to the current user
     #  @balances = current_user.balances.includes(:transactions)
     #  @transactions = @balances.flat_map(&:transactions)
+
+    # calculating total spend for each category
+    # totalspend = 0
+    # ------- method 1 -----
+    # @transactions.category.each do |transaction|
+    #   totalspend += transaction.amount
+    # end
+    # ------ method 2 -----
+    # case @transaction.category
+    # when "Rent"
+    #   @transactions.each do |transaction|
+    #     totalspend += transaction.amount
+    #   end
+    # when "Utilities"
+    #   @transactions.each do |transaction|
+    #     totalspend += transaction.amount
+    #   end
+    # when "Groceries"
+    #   @transactions.each do |transaction|
+    #     totalspend += transaction.amount
+    #   end
+    # else "Others"
+    #   @transactions.each do |transaction|
+    #     totalspend += transaction.amount
+    #   end
+    # end
+    # ----- method 3 -------
+    # if @transactions.category == "Rent"
+    #   totalspendrent += transaction.amount
+    # elsif @transactions.category == "Utilities"
+    #   totalspendutilities += transaction.amount
+    # elsif @transactions.category == "Groceries"
+    #   totalspendgroceries += transaction.amount
+    # else @transactions.category == "Others"
+    #   totalspendothers += transaction.amount
+    # end
   end
 
   def show
@@ -17,6 +53,7 @@ class TransactionsController < ApplicationController
   def new
     @transaction = Transaction.new
     @balances = Balance.where(user: current_user)
+    @category = ["Rent", "Utilities", "Groceries", "Others"]
   end
 
   def create
@@ -24,6 +61,7 @@ class TransactionsController < ApplicationController
     # @balance = Balance.find(params[:id])
     chosen_balance = Balance.find(params[:transaction][:balance_id])
     puts "Balance ID from form: #{params[:transaction][:balance_id]}"
+    
 
     if @transaction.transaction_type == "Credit"
       if chosen_balance.current_balance >= @transaction.amount

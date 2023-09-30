@@ -7,7 +7,8 @@
         <%= f.input :description %>
         <%= f.select :balance_id, options_for_select(@balances.map { |balance| [balance.id, balance.id] }) %>
         <%= f.input :amount %>
-        <%= f.input :category %>
+        <!--%= f.input :category %-->
+        <%= f.input :category, collection: @category, prompt: "Select category" %>
         <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
         <%= f.button :submit %>
       <% end %>
