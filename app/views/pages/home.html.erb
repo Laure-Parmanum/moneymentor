@@ -1,84 +1,48 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'american.jpg') %>');">
-  <div class="container-left">
-    <h1>Welcome to Moneymentor</h1>
-    <p> Your partner for financial success, knowledge, and empowerment </p>
-  </div>
-</div>
-
-<!--
 <div class="home_container">
-  <div class="features-section div1">
-    <%= link_to balances_path do%>
-        <%= image_tag('balanceicon.png') %>
-    <% end %>
-         <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
-  </div>
 
-  <div class="features-section div2">
-    <%= link_to target_amounts_path do%>
-        <%= image_tag('Targeticon.png') %>
-    <% end %>
-        <p>Saving money today secures a brighter tomorrow.</p>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'american.jpg') %>');">
+    <div class="container-left">
+      <h1>Welcome to Moneymentor</h1>
+      <p> Your partner for financial success, knowledge, and empowerment </p>
+      <%= link_to "Start now", "#", class: "btn btn-gradient" %>
+    </div>
+    <%= image_tag('frontright.jpg', size: "250x250") %>
   </div>
 
 
-    <%= link_to transactions_path do%>
-        <%= image_tag('Transaction.png') %>
-    <% end %>
-         <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
-  </div>
-
-       <%= image_tag('About us.png') %>
-
-       <p>At Moneymentor, we're not just about managing money; we're about empowering your financial journey.</p>
-  </div>
-
-</div>
--->
-
-
-<div class="container home">
-  <div class="row">
-    <div class="col-sm-4 mb-3 mb-sm-0">
-      <div class="card">
-          <%= link_to balances_path do%>
-            <div class="card-body rounded">
-              <h5 class="card-title">Balances</h5>
-              <div class="TestCard">
-                  <%= image_tag('balanceicon.png' , class: 'test') %>
-              </div>
-              <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
-            </div>
-          <% end %>
+      <h2> Features</h2>
+  <div class="features-section-container">
+      <div class="features-section div1">
+      <%= link_to balances_path do%>
+          <%= image_tag('b.icon.png') %>
+      <% end %>
+          <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
       </div>
+
+    <div class="features-section div2">
+      <%= link_to target_amounts_path do%>
+          <%= image_tag('t.icon.png') %>
+      <% end %>
+          <p>Saving money today secures a brighter tomorrow.</p>
     </div>
 
-    <div class="col-sm-4">
-      <div class="card">
-          <%= link_to balances_path do%>
-            <div class="card-body rounded">
-              <h5 class="card-title">Targets</h5>
-              <div class="TestCard">
-                  <%= image_tag('Targeticon.png' , class: 'test') %>
-              </div>
-              <p>Saving money today secures a brighter tomorrow.</p>
-            </div>
-          <% end %>
-      </div>
+    <div class="features-section div3">
+      <%= link_to transactions_path do%>
+          <%= image_tag('tr.icon.png') %>
+      <% end %>
+            <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
     </div>
 
-    <div class="col-sm-4">
-      <div class="card">
-          <%= link_to balances_path do%>
-            <div class="card-body rounded">
-              <h5 class="card-title">Transactions</h5>
-              <div class="TestCard">
-                  <%= image_tag('Transaction.png' , class: 'test') %>
-              </div>
-              <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
-            </div>
-          <% end %>
-      </div>
-    </div>
   </div>
+
+    <div class="aboutus-section-container">
+        <h2> About Us </h2>
+        <div class="aboutus-section">
+          <%= image_tag('ab.icon.png', class: "aboutus-img") %>
+          <p>At Moneymentor, we're not just about managing money; we're about empowering your financial journey.<br>Easily track your account balances, income, and expenses in one place.<br> Record and categorize your financial transactions for better expense tracking</p>
+        </div>
+
+
+    </div>
+
 </div>
