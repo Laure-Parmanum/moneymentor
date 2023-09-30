@@ -9,6 +9,8 @@
         <%= f.input :amount %>
         <!--%= f.input :category %-->
         <%= f.input :category, collection: @category, prompt: "Select category" %>
+        <!--adding an input to attached photo-->
+        <%= f.input :photo, as: :file %>
         <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
         <%= f.button :submit %>
       <% end %>

@@ -61,7 +61,7 @@ class TransactionsController < ApplicationController
     # @balance = Balance.find(params[:id])
     chosen_balance = Balance.find(params[:transaction][:balance_id])
     puts "Balance ID from form: #{params[:transaction][:balance_id]}"
-    
+
 
     if @transaction.transaction_type == "Credit"
       if chosen_balance.current_balance >= @transaction.amount
@@ -131,6 +131,6 @@ class TransactionsController < ApplicationController
   end
 
   def transaction_params
-    params.require(:transaction).permit(:date, :amount, :description, :payment_method, :category, :transaction_type, :balance_id)
+    params.require(:transaction).permit(:date, :amount, :description, :payment_method, :category, :transaction_type, :balance_id, :photo)
   end
 end

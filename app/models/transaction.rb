@@ -1,5 +1,6 @@
 class Transaction < ApplicationRecord
   belongs_to :balance
+  has_one_attached :photo
    # Custom validation to determine the type (credit or debit)
   # validate :determine_type_based_on_amount
 
