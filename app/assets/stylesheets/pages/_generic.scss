@@ -2,8 +2,11 @@
 body {
   font: 16px "Helvetica Neue", Helvetica, sans-serif;
   min-height: 100vh;
-  background: #440496;
-  color: black;
+  
+  background: rgb(136,95,188);
+  background: linear-gradient(153deg, rgba(136,95,188,0.9921218487394958) 39%, rgba(68,4,150,1) 69%);
+  color: #666;
+  
   -webkit-font-smoothing: antialiased;
 }
 
