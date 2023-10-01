@@ -1,15 +1,24 @@
-<div class="transaction_container_index">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://c0.wallpaperflare.com/preview/76/901/117/accounting-aerial-application-bankbook.jpg);">
-    <div class="container">
-      <h1>Your transactions</h1>
+<%# <div class="transaction_container_index"> %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn5.vectorstock.com/i/1000x1000/25/99/financial-transactions-deposit-with-bank-cartoon-vector-27132599.jpg);">
+    <%# <div class="container"> %>
+    <h1>Your transactions</h1>
       <a class="btn btn-flat" href="#">Start saving</a>
     </div>
-  </div>
+  <%# </div> %>
+
+  <div class="grid-container" style="--bs-gap: .25rem 1rem;">
+    <div class="grid-item item-1">
+      Search bar placeholder
+      </div>
+
+
+  <div class="grid-item">
+
   <div class="transaction_center">
     <div class= "transaction_left_side">
       <%# <h1>This is our transaction view testing</h1> %>
       <h1>Your latest transactions!</h1>
-      <div class="container">
+      <%# <div class="container"> %>
         <%# <div class="row">
           <div class="col"> %>
           <table class="table">
@@ -38,11 +47,20 @@
           </table>
           <%# </div>
         </div> %>
-      </div>
+      <%# </div> %>
     </div>
+    </div>
+  </div><!-- grid item 2-->
+
+
+  <div class="grid-item">
     <div class="transaction_category charts">
       <%= column_chart Transaction.group(:category).sum(:amount) %>
+
       <h1>Transaction category</h1>
     </div>
-  </div>
+  <%# </div> %>
+<%# </div> %>
+</div><!--grid item 3 -->
+</div> <!-- grid container-->
 </div>
