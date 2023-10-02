@@ -1,5 +1,24 @@
-.targetamounts_container-index {
+.banner{
   background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 20px;
+  width: 95%;
+  margin: 5rem 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+body{
+  background:#fff!important;
+}
+
+
+
+.targetamounts_container-index {
+  //background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,6 +26,8 @@
     display: flex;
     gap: 40px;
   }
+
+
   .links__container {
     display: flex;
     align-items: center;
@@ -15,6 +36,10 @@
   }
   .links__container > * {
     margin: 0 !important;
+  }
+
+  .image-right{
+    border-radius: 20px;
   }
   .container--right, .container {
     width: 50%;
@@ -271,4 +296,52 @@
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+.gradient-background {
+  background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.image-right {
+  border-radius: 20px!important;
+}
+
+
+h1, .h1 {
+  font-size: 2rem;
+  color: #421111!important;
+  text-align: left!important;
+  margin: 2rem;
+}
+
+
+.btn-ruby{
+  background:#421111!important;
+  color:#fff;
+  border-radius:20px;
+  border:2px solid #c7c7c7;
+}
+
+.links__container.ml-5 {
+  padding: 1rem;
+}
+
+.btn-ruby-invese{
+  color:#421111!important;
+  border:2px solid #421111!important;
+  border-radius:20px;
 }
