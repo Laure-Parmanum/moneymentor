@@ -5,14 +5,14 @@
 
   h2{
     text-align: center;
-    color: rgb(10, 39, 89);
+    color: white;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 1px 1px 5px 0px  #000;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-left: 650px;
     margin-right: 650px;
-    background-color: #ffffff;
+    background-color: #A74AC7;
 
 
   }
@@ -28,10 +28,10 @@
   margin-left: 30px;
   margin-right: 30px;
 
-  background-color: #312f2f74;
+  background-color: rgb(130, 214, 206);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 1px 1px 5px 0px  #000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
 
@@ -57,11 +57,13 @@
     }
     p {
       text-decoration: none;
-      color: #f3f3f3;
+      color: black;
       font-size: 20px;
       font: forum;
       padding-left: 50px;
       margin-bottom: 20px;
+      font-family: sans-serif;
+      font-weight: normal;
 
     }
   }
@@ -111,19 +113,29 @@
 
   .banner h1 {
     margin: 0;
-    color: white;
+    color: rgb(130, 214, 206);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 32px;
     font-weight: bold;
+    ext-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
 
   }
 
   .banner p {
     font-size: 20px;
-    color: white;
+    color: rgb(130, 214, 206);
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     width: fit-content;
+    font-weight: bold;
 
   }
 
@@ -133,9 +145,10 @@
     padding: 8px 24px;
     border-radius: 4px;
     font-weight: bold;
-    background: linear-gradient(#167FFB, #0F60C4);
+    background: #A74AC7;
     transition: background 0.3s ease;
     border: 1px solid #0F60C4;
+    border-radius: 12px;
 
   }
 
@@ -147,9 +160,11 @@
 
   .aboutus-section-container p{
     text-align: justify;
-    color: white;
+    color: black;
     width: 300px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: normal;
   }
 
   .container-left {
@@ -164,7 +179,7 @@
     justify-content: center;
     align-items: center;
     gap: 150px;
-    background-color: #2e2e2e74;
+    background-color: rgb(130, 214, 206);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 1px 1px 5px 0px  #000;
