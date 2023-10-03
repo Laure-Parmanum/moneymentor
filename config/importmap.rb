@@ -2,5 +2,4 @@
 
 pin "application", preload: true
 # setup chartkick
-pin "chartkick", to: "chartkick.js"
-pin "Chart.bundle", to: "Chart.bundle.js"
+
