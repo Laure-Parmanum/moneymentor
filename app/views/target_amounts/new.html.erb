@@ -8,6 +8,7 @@
 <div class="money-tracking-app form-container"> <!-- Added form-container class -->
   <p>Set financial goals, track your progress, and make your dreams a reality. Start by creating a new target below.</p>
   <h1>Create a new target</h1>
+  
  <%= simple_form_for(@target) do |f| %>
       <%# <%= f.association :balance %>
       <%=f.association :balance, label_method: :current_balance, value_method: :id, include_blank: false %>

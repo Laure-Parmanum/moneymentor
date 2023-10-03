@@ -87,4 +87,4 @@ gem "faker"
 #(laure) setup graph gem
 gem "chartkick"
 
-gem "importmap-rails", "~> 1.2"
+
