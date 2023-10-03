@@ -182,3 +182,77 @@ span.popup {
     padding: .4em;
   }
 }
+
+
+.form-background {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  padding: 20px 50px 40px;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  font-family: sans-serif;
+}
+.form-background * {
+  box-sizing: border-box;
+}
+
+
+.form-elements {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.form-elements input {
+  margin-bottom: 15px;
+  color: #A74AC7;
+}
+
+
+
+#create-transaction {
+  display: block;
+  margin: 20px auto 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  text-align: center;
+  line-height: 1em;
+
+  background: #207cca;
+  background: -moz-linear-gradient(left, #207cca 0%,#A74AC7 100%);
+  background: -webkit-linear-gradient(left, #207cca 0%,#A74AC7 100%);
+  background: linear-gradient(to right, #207cca 0%,#A74AC7 100%);
+}
+
+.form-header h1{
+  color:  #A74AC7;
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.form-input-elements{
+  color: #A74AC7;
+  // font-weight: bold;
+}
+
+.date{
+  color: #A74AC7;
+}
+
+.transaction{
+  color: #A74AC7;
+}
+
+.form-input-elements .select{
+  color: #A74AC7;
+}
+
+#photo{
+  color: #A74AC7;
+}

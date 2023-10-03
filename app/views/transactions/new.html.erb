@@ -1,18 +1,29 @@
-<h1>new transaction</h1>
-<div class = "container vh-100 py-5 mb-5">
-    <div class="bg-white shadow" >
-      <%= simple_form_for @transaction do |f| %>
-      <%= f.input :transaction_type, collection: ['Debit', 'Credit'], prompt: "Select type" %>
-        <%= f.input :date %>
-        <%= f.input :description %>
-        <%= f.select :balance_id, options_for_select(@balances.map { |balance| [balance.id, balance.id] }) %>
-        <%= f.input :amount %>
-        <!--%= f.input :category %-->
-        <%= f.input :category, collection: @category, prompt: "Select category" %>
-        <!--adding an input to attached photo-->
-        <%= f.input :photo, as: :file %>
-        <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
-        <%= f.button :submit %>
-      <% end %>
-    </div>
+<div class = "form-header">
+  <h1>New Transaction</h1>
+  <!--div class = "container vh-100 py-5 mb-5"-->
+  <div class = "form-background">
+      <!--div class="bg-white shadow"-->
+      <div class="form-elements" >
+        <%= simple_form_for @transaction do |f| %>
+        <span class="form-input-elements">
+        <span><%= f.input :transaction_type, collection: ['Debit', 'Credit'], prompt: "Select type" %></span>
+        <!--%= f.input :transaction_type, collection: ['Debit', 'Credit'], prompt: "Select type" %-->
+        <span class = "date"><%= f.input :date %></span>
+          <!--%= f.input :date %-->
+          <%= f.input :description %>
+          <%= f.select :balance_id, options_for_select(@balances.map { |balance| [balance.id, balance.id] }) %>
+          <%= f.input :amount %>
+          <!--%= f.input :category %-->
+          <%= f.input :category, collection: @category, prompt: "Select category" %>
+          <!--adding an input to attached photo-->
+          <span id="photo"><%= f.input :photo, as: :file %></span>
+          <!--%= f.input :photo, as: :file %-->
+          <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
+          </span>
+          <div id= "create-transaction">
+          <%= f.button :submit %>
+          </div>
+        <% end %>
+      </div>
+  </div>
 </div>
