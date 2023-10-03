@@ -61,7 +61,8 @@
       <div class="row mb-5">
 
       <div class="col-12 col-md-6">
-        <img src="https://cdn.pixabay.com/photo/2017/06/04/20/48/vision-2372177_1280.jpg" alt="Vision Image" class="img-fluid image-right">
+        <%# <img src="https://cdn.pixabay.com/photo/2017/06/04/20/48/vision-2372177_1280.jpg" alt="Vision Image" class="img-fluid image-right"> %>
+        <%= column_chart Transaction.group(:category).sum(:amount) %>
       </div>
 
       <div class="col-12 col-md-6">
