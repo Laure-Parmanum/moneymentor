@@ -1,4 +1,4 @@
-.banner{
+.banner-target{
   background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
   background-size: cover;
   background-position: center;
@@ -321,10 +321,17 @@
 }
 
 
-h1, .h1 {
+h1, .h1  {
   font-size: 2rem;
-  color: #421111!important;
-  text-align: left!important;
+  color: #421111;
+  text-align: left;
+  margin: 2rem;
+}
+
+.display-4 ,.lead {
+  font-size: 2rem;
+  color: #421111;
+  text-align: center;
   margin: 2rem;
 }
 
@@ -344,4 +351,21 @@ h1, .h1 {
   color:#421111!important;
   border:2px solid #421111!important;
   border-radius:20px;
+}
+
+.targetamount_container_new .form-container ,.form-select ,.form-control{
+border-radius:20px ;
+}
+
+h1.arn {
+ margin: 0;
+  text-align: left;
+}
+
+ul.list-group {
+  border-radius:20px ;
+}
+
+.bg-white.shadow {
+  border-radius: 20px;
 }

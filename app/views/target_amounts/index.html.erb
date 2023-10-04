@@ -1,6 +1,6 @@
 <div class="row py-5">
   <section>
-   <div class="banner"></div>
+   <div class="banner-target"></div>
   </section>
 
   <div class="col-12 col-md-6 align-self-center">
@@ -33,7 +33,7 @@
                       <%= link_to 'Show', target, class: 'btn btn-ruby' %>
                       <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-ruby' %>
                       <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-ruby' %>
-
+                      
                     </td>
                   </tr>
                 <% end %>
