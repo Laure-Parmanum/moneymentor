@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
- <div class="transaction_container_index">
+  <div class="transaction_container_index">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn5.vectorstock.com/i/1000x1000/25/99/financial-transactions-deposit-with-bank-cartoon-vector-27132599.jpg);">
     <%# <div class="container"> %>
     <h1 id="bannertitle">Your transactions</h1>
@@ -10,10 +6,6 @@
       <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
       <%= link_to 'create new transaction', new_transaction_path, class: 'btn btn-primary mt-3' %>
     </div>
-<<<<<<< HEAD
-=======
-  </div>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
  </div>
 
   <div class="grid-container" style="--bs-gap: .25rem 1rem;">
@@ -27,66 +19,37 @@
   <div class="transaction_center">
     <div class= "transaction_left_side">
       <%# <h1>This is our transaction view testing</h1> %>
-<<<<<<< HEAD
-=======
-
-      <div class="container">
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
       <h1 id="tabletitle">Your latest transactions!</h1>
       <%# <div class="container"> %>
         <%# <div class="row">
           <div class="col"> %>
-<<<<<<< HEAD
           <table class="styled-table">
             <thead>
-=======
-          <table class="table">
-          <table class="styled-table">
-            <thead>
-              <tr>
-           
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
               <tr class="styled-columns">
                 <th  scope="col">Transaction ID</th>
                 <th scope="col">Amount</th>
                 <th scope="col">Transaction type</th>
                 <th scope="col">Balance ID</th>
-<<<<<<< HEAD
-=======
-                <th scope="col">Detail</th>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
                 <th scope="col">Details</th>
               </tr>
             </thead>
             <% @transactions.each do |transaction| %>
             <tbody>
-<<<<<<< HEAD
-=======
-              <tr>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
               <tr class="rows">
                   <th scope="row"><%= transaction.id %></th>
                     <td><%= transaction.amount %></td>
                     <td><%=  transaction.transaction_type %></td>
                     <td><%=  transaction.balance_id %></td>
-<<<<<<< HEAD
-                    <td><% link_to 'View', transaction, method: :delete, data: { confirm: 'Are you sure?' } %> <span class="popup" data-popuptext="click to view transaction details">View</span></td>
-=======
-                    <td><%= link_to 'View transaction', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     <!--td><% link_to 'View',transaction_path(transaction), method: :delete, data: { confirm: 'Are you sure?' } %> <span class="popup" data-popuptext="click to view transaction details">View</span></td-->
                     <td><% link_to 'View',transaction_path(transaction)%> <span class="popup" data-popuptext="click to view transaction details">View</span></td>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
                     <!-- <%= link_to 'Edit', edit_transaction_path(transaction) %>
                     <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %> -->
               </tr>
-              <% end %>
+            </tbody>
+             <% end %>
           </table>
           <%# </div>
         </div> %>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
       <%# </div> %>
     </div>
     </div>
@@ -99,10 +62,6 @@
 
       <h1>Transaction category</h1>
     </div>
-<<<<<<< HEAD
-=======
-  </div>
->>>>>>> 5a79088016f0e891c9c9d7179ab0b75136df7d25
   <%# </div> %>
 <%# </div> %>
 </div><!--grid item 3 -->
