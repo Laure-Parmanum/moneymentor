@@ -19,11 +19,7 @@
 
   <div class="transaction_center">
     <div class= "transaction_left_side">
-      <%# <h1>This is our transaction view testing</h1> %>
       <h1 id="tabletitle">Your latest transactions!</h1>
-      <%# <div class="container"> %>
-        <%# <div class="row">
-          <div class="col"> %>
           <table class="styled-table">
             <thead>
               <tr class="styled-columns">
@@ -42,16 +38,12 @@
                     <td><%=  transaction.transaction_type %></td>
                     <td><%=  transaction.balance_id %></td>
                     <!--td><% link_to 'View',transaction_path(transaction), method: :delete, data: { confirm: 'Are you sure?' } %> <span class="popup" data-popuptext="click to view transaction details">View</span></td-->
-                    <td><% link_to 'View',transaction_path(transaction)%> <span class="popup" data-popuptext="click to view transaction details">View</span></td>
-                    <!-- <%= link_to 'Edit', edit_transaction_path(transaction) %>
-                    <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+                    <td><%= link_to "View", transaction_path(transaction) %></td>
+
               </tr>
             </tbody>
              <% end %>
           </table>
-          <%# </div>
-        </div> %>
-      <%# </div> %>
     </div>
     </div>
   </div><!-- grid item 2-->
