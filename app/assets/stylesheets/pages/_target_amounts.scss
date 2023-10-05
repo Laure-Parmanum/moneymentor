@@ -1,347 +1,347 @@
-.banner{
-  background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 30vh;
-  border-radius: 20px;
-  width: 95%;
-  margin: 5rem 2rem;
-  align-items: center;
-  justify-content: center;
-}
+// .banner{
+//   background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   height: 30vh;
+//   border-radius: 20px;
+//   width: 95%;
+//   margin: 5rem 2rem;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-// body{
-//   background:#fff!important;
+// // body{
+// //   background:#fff!important;
+// // }
+
+
+
+// .targetamounts_container-index {
+//   //background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   .container__container {
+//     display: flex;
+//     gap: 40px;
+//   }
+
+
+//   .links__container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 40px;
+//   }
+//   .links__container > * {
+//     margin: 0 !important;
+//   }
+
+//   .image-right{
+//     border-radius: 20px;
+//   }
+//   .container--right, .container {
+//     width: 50%;
+//   }
+//   .money-tracking-app {
+//     max-width: 400px;
+//     margin-top: 100px;
+//     padding: 20px;
+//     // background-color: rgb(212, 146, 219);
+//     background-color:white;
+//     border-radius: 8px;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//     margin-left: 550px;
+//     h1 {
+//       text-align: center;
+//       margin-bottom: 20px;
+//       color: #333;
+//     }
+//     .form-group {
+//       margin-bottom: 15px;
+//       label {
+//         display: block;
+//         margin-bottom: 5px;
+//         font-weight: bold;
+//       }
+//       input[type="text"],
+//       input[type="date"] {
+//         width: 100%;
+//         padding: 10px;
+//         border: 1px solid #ccc;
+//         border-radius: 4px;
+//       }
+//     }
+//     input[type="submit"] {
+//       background-color: #007BFF; // Primary button color
+//       color: white;
+//       padding: 10px 15px;
+//       border: none;
+//       border-radius: 4px;
+//       cursor: pointer;
+//       font-weight: bold;
+//     }
+//     input[type="submit"]:hover {
+//       background-color: #0056B3; // Darker shade for hover effect
+//     }
+//   }
+//   .center-text {
+//     text-align: center;
+//   }
 // }
 
 
+// .targetamount_container_new {
+//   background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
 
-.targetamounts_container-index {
-  //background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  .container__container {
-    display: flex;
-    gap: 40px;
-  }
-
-
-  .links__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-  }
-  .links__container > * {
-    margin: 0 !important;
-  }
-
-  .image-right{
-    border-radius: 20px;
-  }
-  .container--right, .container {
-    width: 50%;
-  }
-  .money-tracking-app {
-    max-width: 400px;
-    margin-top: 100px;
-    padding: 20px;
-    // background-color: rgb(212, 146, 219);
-    background-color:white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 550px;
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .form-group {
-      margin-bottom: 15px;
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      input[type="text"],
-      input[type="date"] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-    }
-    input[type="submit"] {
-      background-color: #007BFF; // Primary button color
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    input[type="submit"]:hover {
-      background-color: #0056B3; // Darker shade for hover effect
-    }
-  }
-  .center-text {
-    text-align: center;
-  }
-}
+// // For Page New form
+// .form-container {
+//   background-color: white;
+//   padding: 20px; /* Add padding for spacing */
+//   max-width: 700px;
+//   margin: auto;
+// }
 
 
-.targetamount_container_new {
-  background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+// .button-group {
+//   text-align: center;
+//   margin-top: 20px;
 
-// For Page New form
-.form-container {
-  background-color: white;
-  padding: 20px; /* Add padding for spacing */
-  max-width: 700px;
-  margin: auto;
-}
+//   .btn {
+//     text-decoration: none;
+//     padding: 10px 15px;
+//     border-radius: 4px;
+//     font-weight: bold;
+//     margin-right: 10px;
+//   }
 
+//   .btn-secondary {
+//     background-color: #ccc; // Secondary button color
+//   }
 
-.button-group {
-  text-align: center;
-  margin-top: 20px;
+//   .btn-primary {
+//     background-color: #007bff; // Primary button color
+//   }
+// }
 
-  .btn {
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  .btn-secondary {
-    background-color: #ccc; // Secondary button color
-  }
-
-  .btn-primary {
-    background-color: #007bff; // Primary button color
-  }
-}
-
-.center-text {
-  text-align: center;
-}
-}
+// .center-text {
+//   text-align: center;
+// }
+// }
 
 
-.targetamounts_container_show {
-  // background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+// .targetamounts_container_show {
+//   // background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
 
-  .target-details {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   .target-details {
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     background-color: rgba(255, 255, 255, 0.9);
+//     border-radius: 8px;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    .details-header {
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333; // Adjust the color as needed
-      }
+//     .details-header {
+//       h1 {
+//         text-align: center;
+//         margin-bottom: 20px;
+//         color: #333; // Adjust the color as needed
+//       }
 
-      p {
-        text-align: center;
-        margin-bottom: 10px;
+//       p {
+//         text-align: center;
+//         margin-bottom: 10px;
 
-        strong {
-          font-weight: bold;
-        }
-      }
-    }
+//         strong {
+//           font-weight: bold;
+//         }
+//       }
+//     }
 
-    .target-list {
-      list-style-type: none;
-      padding: 0;
+//     .target-list {
+//       list-style-type: none;
+//       padding: 0;
 
-      .target-item {
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+//       .target-item {
+//         margin-bottom: 20px;
+//         padding: 10px;
+//         border: 1px solid #ccc;
+//         border-radius: 8px;
 
-        p {
-          margin: 0;
+//         p {
+//           margin: 0;
 
-          strong {
-            font-weight: bold;
-          }
-        }
-      }
-    }
+//           strong {
+//             font-weight: bold;
+//           }
+//         }
+//       }
+//     }
 
-    .back-button {
-      text-align: center;
-      margin-top: 20px;
+//     .back-button {
+//       text-align: center;
+//       margin-top: 20px;
 
-      .btn-secondary {
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        font-weight: bold;
-      }
-    }
-  }
+//       .btn-secondary {
+//         text-decoration: none;
+//         padding: 10px 15px;
+//         border-radius: 4px;
+//         font-weight: bold;
+//       }
+//     }
+//   }
 
-  .target_amounts-container{
-    padding: 0 40px;
-    margin-top: 90px;
-    h1{
-      color: #fffdfd;
-      font: CoFo Sans;
-      font-size: 60px;
-      margin-bottom: 40px;
-    }
-    p{
-      color: #fffdfd;
-      font: CoFo Sans;
-      font-size: 20px;
-    }
-    h2{
-      color: #fffdfd;
-      font: CoFo Sans;
-      font-size: 30px;
-      padding-top: 30px;
-    }
-    h3{
-      color: #fffdfd;
-      font: CoFo Sans;
-      font-size: 20px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-  }
+//   .target_amounts-container{
+//     padding: 0 40px;
+//     margin-top: 90px;
+//     h1{
+//       color: #fffdfd;
+//       font: CoFo Sans;
+//       font-size: 60px;
+//       margin-bottom: 40px;
+//     }
+//     p{
+//       color: #fffdfd;
+//       font: CoFo Sans;
+//       font-size: 20px;
+//     }
+//     h2{
+//       color: #fffdfd;
+//       font: CoFo Sans;
+//       font-size: 30px;
+//       padding-top: 30px;
+//     }
+//     h3{
+//       color: #fffdfd;
+//       font: CoFo Sans;
+//       font-size: 20px;
+//       margin-top: 20px;
+//       margin-bottom: 30px;
+//     }
+//   }
 
-  .path_target{
-    color: white;
-    background-color: #0D6EFD;
-    padding: 10px 20px;
-  }
+//   .path_target{
+//     color: white;
+//     background-color: #0D6EFD;
+//     padding: 10px 20px;
+//   }
 
-  // .background-container{
-  //   background-size: cover;
-  //   background-position: center;
-  //   background-image: url(/app/assets/images/saving.jpg);
-  // }
-
-
-  .features-section-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 100px;
-    grid-row-gap: 0px;
-    justify-content: center;
-    margin: auto;
-    margin-top: 30px;
+//   // .background-container{
+//   //   background-size: cover;
+//   //   background-position: center;
+//   //   background-image: url(/app/assets/images/saving.jpg);
+//   // }
 
 
-    }
-
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 1 / 3 / 2 / 4; }
-
-
-    // test
-    .new_banner {
-      display: flex; /* Align image and text side by side */
-      align-items: center;
-
-      img {
-        max-width: 75%;
-      }
-
-      .text {
-        flex: 1; /* Allow text to take remaining width */
-        padding: 20px; /* Add spacing around the text */
+//   .features-section-container {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-rows: repeat(2, 1fr);
+//     grid-column-gap: 100px;
+//     grid-row-gap: 0px;
+//     justify-content: center;
+//     margin: auto;
+//     margin-top: 30px;
 
 
-        p {
-          font-size: 30px;
-        }
-      }
-    }
+//     }
 
-      .center-text {
-      text-align: center;
-    }
+//     .div1 { grid-area: 1 / 1 / 2 / 2; }
+//     .div2 { grid-area: 1 / 2 / 2 / 3; }
+//     .div3 { grid-area: 1 / 3 / 2 / 4; }
 
-    .center-text p {
-      font-size: 30px;
-    }
+
+//     // test
+//     .new_banner {
+//       display: flex; /* Align image and text side by side */
+//       align-items: center;
+
+//       img {
+//         max-width: 75%;
+//       }
+
+//       .text {
+//         flex: 1; /* Allow text to take remaining width */
+//         padding: 20px; /* Add spacing around the text */
+
+
+//         p {
+//           font-size: 30px;
+//         }
+//       }
+//     }
+
+//       .center-text {
+//       text-align: center;
+//     }
+
+//     .center-text p {
+//       font-size: 30px;
+//     }
 
 
 
-}
+// }
 
-.targetamout_container_edit {
-  // background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+// .targetamout_container_edit {
+//   // background-image: url('https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/12/GettyImages-862152448-1920x1152.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image file */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
 
-}
+// }
 
-.gradient-background {
-  background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
-}
+// .gradient-background {
+//   background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+//   background-size: 180% 180%;
+//   animation: gradient-animation 18s ease infinite;
+// }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+// @keyframes gradient-animation {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
 
-.image-right {
-  border-radius: 20px!important;
-}
-
-
-h1, .h1 {
-  font-size: 2rem;
-  color: #421111!important;
-  text-align: left!important;
-  margin: 2rem;
-}
+// .image-right {
+//   border-radius: 20px!important;
+// }
 
 
-.btn-ruby{
-  background:#421111!important;
-  color:#fff;
-  border-radius:20px;
-  border:2px solid #c7c7c7;
-}
+// h1, .h1 {
+//   font-size: 2rem;
+//   color: #421111!important;
+//   text-align: left!important;
+//   margin: 2rem;
+// }
 
-.links__container.ml-5 {
-  padding: 1rem;
-}
 
-.btn-ruby-invese{
-  color:#421111!important;
-  border:2px solid #421111!important;
-  border-radius:20px;
-}
+// .btn-ruby{
+//   background:#421111!important;
+//   color:#fff;
+//   border-radius:20px;
+//   border:2px solid #c7c7c7;
+// }
+
+// .links__container.ml-5 {
+//   padding: 1rem;
+// }
+
+// .btn-ruby-invese{
+//   color:#421111!important;
+//   border:2px solid #421111!important;
+//   border-radius:20px;
+// }
