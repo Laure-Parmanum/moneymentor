@@ -5,32 +5,11 @@
 }
 .transaction_container_index .container{
   height: 400px;
-}
-.transaction_container_index .transaction_left_side {
-  width: 50%;
-  .banner {
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-  }
-  .banner h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
   position: relative;
   .h1{
     color: aqua;
   }
-  .banner p {
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
 
-}
 }
 // .transaction_container_index .transaction_left_side {
 //   width: 50%;
@@ -73,7 +52,7 @@
 }
 .grid-item {
   // border for grid - to uncomment
-  // border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -143,7 +122,7 @@
 }
 
 #bannertitle{
-  color: #A74AC7;
+  color: #A74AC7 !important;
   font-weight: bold;
   font-size: 50px;
   text-shadow:
@@ -203,8 +182,6 @@ span.popup {
     padding: .4em;
   }
 }
-.transaction_container_index .transaction_category{
-  width: 50%;
 
 
 .form-background {
@@ -279,4 +256,26 @@ span.popup {
 #photo{
   color: #A74AC7;
 }
+
+/// show page
+.transaction-details{
+ color: black;
 }
+
+.details{
+  color: black;
+  list-style-type: none;
+  line-height: 1.8;
+}
+
+// .photo-display{
+//  background-size: cover;
+// }
+
+.transaction_category_charts{
+  color: #A74AC7;
+}
+
+
+// alert
+
