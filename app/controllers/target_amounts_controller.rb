@@ -49,8 +49,7 @@ class TargetAmountsController < ApplicationController
 
   # /delete
   def destroy
-    @target.destroy
-    redirect_to target_amounts_path, status: :see_other
+   @target.destroy
   end
 
   private
@@ -62,4 +61,5 @@ class TargetAmountsController < ApplicationController
   def target_params
     params.require(:target_amount).permit(:id, :target_date, :target_amount, :balance_id, :status)
   end
+
 end
