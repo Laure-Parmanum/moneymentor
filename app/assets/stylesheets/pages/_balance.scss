@@ -15,6 +15,7 @@
     &__title {
       font-size: 50px;
       color: #333;
+      margin-left: 100px;
     }
 
     &__subtitle {
@@ -58,7 +59,7 @@
 
   // --- CARD -------------------------------------------------------------------
 
-  .card {
+  .card-1 {
     font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
     position: relative;
     vertical-align: middle;
@@ -74,18 +75,28 @@
 
     &__number {
       font-size: 30px;
-      padding: 90px 0 15px;
+      padding: 40px 0 15px;
       text-align: center;
+      color:white;
+    }
+
+
+    &__name{
+      font-size: 30px;
+      color:white;
+      text-align: left;
     }
 
     &__expiry-date {
       font-size: 14px;
       padding-bottom: 20px;
       text-align: center;
+      color:white;
     }
 
     &__owner {
       text-align: left;
+      color:white;
     }
 
     &__logo {
@@ -125,12 +136,172 @@
 
   }
 
+  .card-2 {
+    font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+    position: relative;
+    vertical-align: middle;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #000;
+    &__number {
+      font-size: 30px;
+      padding: 40px 0 15px;
+      text-align: center;
+      color:white;
+    }
+
+
+    &__name{
+      font-size: 30px;
+      color:white;
+      text-align: left;
+    }
+
+    &__expiry-date {
+      font-size: 14px;
+      padding-bottom: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    &__owner {
+      text-align: left;
+      color: white;
+    }
+
+    &__logo {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      height: 70px;
+      width: 100px;
+    }
+
+    &__strip {
+      background: #000;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    &__signature {
+      float: left;
+      width: 65%;
+      height: 40px;
+      margin-left: 10px;
+      background: #999;
+    }
+
+    &__ccv {
+      float: left;
+      margin-top: 5px;
+      padding: 7px;
+      background: #fff;
+      color: #111;
+      line-height: 1;
+    }
+
+    &--front {
+      font-size: 16px;
+      font-family: 'Source Code Pro';
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+    }
+
+  }
+
+  .card-3 {
+    font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+    position: relative;
+    vertical-align: middle;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: rgb(14,38,212);
+    background: radial-gradient(circle, rgba(14,38,212,1) 33%, rgba(67,22,125,0.9837184873949579) 73%);
+    &__number {
+      font-size: 30px;
+      padding: 40px 0 15px;
+      text-align: center;
+      color: white;
+    }
+
+
+    &__name{
+      font-size: 30px;
+      color:white;
+      text-align: left;
+    }
+
+    &__expiry-date {
+      font-size: 14px;
+      padding-bottom: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    &__owner {
+      text-align: left;
+      color: white;
+    }
+
+    &__logo {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+
+    }
+
+    &__strip {
+      background: #000;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    &__signature {
+      float: left;
+      width: 65%;
+      height: 40px;
+      margin-left: 10px;
+      background: #999;
+    }
+
+    &__ccv {
+      float: left;
+      margin-top: 5px;
+      padding: 7px;
+      background: #fff;
+      color: #111;
+      line-height: 1;
+    }
+
+    &--front {
+      font-size: 16px;
+      font-family: 'Source Code Pro';
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+    }
+
+  }
+
   .col{
     font-size: 20px;
     color: #000;
   }
 
 }
+
+
+
+
 // //show
 
 

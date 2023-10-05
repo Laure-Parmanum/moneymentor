@@ -6,9 +6,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
   </head>
 
@@ -16,6 +16,9 @@
 <%= render "shared/flashes" %>
 
     <%= yield %>
-    <%= render "shared/footer" %>
+
   </body>
+  <footer>
+    <%= render "shared/footer" %>
+  </footer>
 </html>
