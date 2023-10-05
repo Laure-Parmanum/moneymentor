@@ -1,3 +1,4 @@
+
   <div class="transaction_container_index">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn5.vectorstock.com/i/1000x1000/25/99/financial-transactions-deposit-with-bank-cartoon-vector-27132599.jpg);">
     <%# <div class="container"> %>
@@ -18,11 +19,15 @@
 
   <div class="transaction_center">
     <div class= "transaction_left_side">
+
       <%# <h1>This is our transaction view testing</h1> %>
       <h1 id="tabletitle">Your latest transactions!</h1>
       <%# <div class="container"> %>
         <%# <div class="row">
           <div class="col"> %>
+
+      <h1 id="tabletitle">Your latest transactions!</h1>
+
           <table class="styled-table">
             <thead>
               <tr class="styled-columns">
@@ -41,26 +46,29 @@
                     <td><%=  transaction.transaction_type %></td>
                     <td><%=  transaction.balance_id %></td>
                     <!--td><% link_to 'View',transaction_path(transaction), method: :delete, data: { confirm: 'Are you sure?' } %> <span class="popup" data-popuptext="click to view transaction details">View</span></td-->
-                    <td><% link_to 'View',transaction_path(transaction)%> <span class="popup" data-popuptext="click to view transaction details">View</span></td>
-                    <!-- <%= link_to 'Edit', edit_transaction_path(transaction) %>
-                    <%= link_to 'Delete', transaction, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+                    <td><%= link_to "View", transaction_path(transaction) %></td>
+
               </tr>
             </tbody>
              <% end %>
           </table>
+
           <%# </div>
         </div> %>
       <%# </div> %>
+
     </div>
     </div>
   </div><!-- grid item 2-->
 
 
   <div class="grid-item">
-    <div class="transaction_category charts">
-      <%= column_chart Transaction.group(:category).sum(:amount) %>
-
+    <div class="transaction_category_charts">
       <h1>Transaction category</h1>
+      <%= column_chart Transaction.group(:category).sum(:amount) %>
+      <%= pie_chart Transaction.group(:category).count %>
+      <!--%= line_chart Transaction.group(:amount).count %-->
+      <!--%= line_chart Transaction.group(:category).group(:amount).count %-->
     </div>
   <%# </div> %>
 <%# </div> %>

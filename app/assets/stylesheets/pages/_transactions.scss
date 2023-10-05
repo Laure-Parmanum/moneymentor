@@ -52,7 +52,7 @@
 }
 .grid-item {
   // border for grid - to uncomment
-  // border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -122,7 +122,7 @@
 }
 
 #bannertitle{
-  color: #A74AC7;
+  color: #A74AC7 !important;
   font-weight: bold;
   font-size: 50px;
   text-shadow:
@@ -256,3 +256,30 @@ span.popup {
 #photo{
   color: #A74AC7;
 }
+
+
+
+
+/// show page
+.transaction-details{
+ color: black;
+}
+
+.details{
+  color: black;
+  list-style-type: none;
+  line-height: 1.8;
+}
+
+// .photo-display{
+//  background-size: cover;
+// }
+
+.transaction_category_charts{
+  color: #A74AC7;
+}
+
+
+
+
+

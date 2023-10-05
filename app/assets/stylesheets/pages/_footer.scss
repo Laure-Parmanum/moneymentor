@@ -69,30 +69,31 @@
 
 // correction done by Arnaud and Laure
 .footer {
-  background: linear-gradient(153deg, rgba(2,246,254,1) 38%, rgba(65,30,129,1) 94%, rgba(67,22,125,1) 94%);
+  // background: linear-gradient(153deg, rgba(2,246,254,1) 38%, rgba(65,30,129,1) 94%, rgba(67,22,125,1) 94%);
+  background:#421111;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 85px;
   padding: 0px 5px;
-  color: rgba(0,0,0,0.3);
+  color: #fff;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #fff;
+  opacity: 1;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 1;
+  color: tan;
 }
 .footer .fa-heart {
-  color: #D23333;
-  background:#421111;
+  color: #fff;
+  background:#fff;
   background: linear-gradient(153deg, rgba(2,246,254,1) 38%, rgba(65,30,129,1) 94%, rgba(67,22,125,1) 94%);
   }  // display: flex;
