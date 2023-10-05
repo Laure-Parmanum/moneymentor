@@ -32,7 +32,7 @@
                     <td>
                       <%= link_to 'Show', target, class: 'btn btn-ruby' %>
                       <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-ruby' %>
-                      <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-ruby' %>
+                      <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-ruby' %>
 
                     </td>
                   </tr>
@@ -66,10 +66,10 @@
         <%= column_chart Transaction.group(:category).sum(:amount) %>
       </div>
 
-      <div class="col-12 col-md-6">
+      <%# <div class="col-12 col-md-6">
         <img src="https://cdn.pixabay.com/photo/2017/06/04/20/48/vision-2372177_1280.jpg" alt="Vision Image" class="img-fluid image-right">
-        <%# <%= area_chart TargetAmount.group_by_date(:target_amount) %> 
 
-    </div>
+
+    </div> %>
   </div>
 </div>
