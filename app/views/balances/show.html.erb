@@ -7,18 +7,72 @@
 <%#  %>
       <!-- RIGHT SIDE: CURRENT BALANCE SHEET  -->
       <%# This is where the user is redirected when they click on a specific account %>
-<div>
-  <p>This is the account details page. You are viewing account ID <%= @balance.id %>.</p>
-  <%# <p>Account Balance: <%= @balance.new</p> %>
-  <!-- Add any other account details you want to display -->
-
-  <!-- Button to edit the account -->
-  <a href="<%= edit_balance_path(@balance) %>">
-    <button>Edit Account</button>
-  </a>
-
-  <!-- Button to add a new account -->
-  <a href="<%= new_balance_path %>">
-    <button>Add Account</button>
-  </a>
-</div>
+ <div class="balance-sheet">
+        <div class="header">
+          <h2>Current Balance</h2>
+          <p class="total-balance">€729.<sup>00</sup></p>
+        </div>
+        <div class="balance-movement">
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
+              <div class="movement-description">
+                <h3>Apple iPhone X, 128Gb</h3>
+                <p>Electronics #32343424 - <span>12 March 2020</span></p>
+              </div>
+              <p class="amount negative">€650.<sup>00</sup></p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/L0A.svg" alt="" />
+              <div class="movement-description">
+                <h3>Funds Added</h3>
+                <p>Payment #5435 - <span>11 March 2020</span></p>
+              </div>
+              <p class="amount positive">€900.<sup>00</sup></p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
+              <div class="movement-description">
+                <h3>Energy Bill</h3>
+                <p>Expenses #745237423 - <span>11 March 2020</span></p>
+              </div>
+              <p class="amount negative">€84.<sup>90</sup></p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
+              <div class="movement-description">
+                <h3>The Eye Cinema Tickets</h3>
+                <p>Entertainment #323345662 - <span>10 March 2020</span></p>
+              </div>
+              <p class="amount negative">€40.<sup>00</sup></p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
+              <div class="movement-description">
+                <h3>McBurger Restaurant</h3>
+                <p>Food #210974 - <span>10 March 2020</span></p>
+              </div>
+              <p class="amount negative">€10.<sup>50</sup></p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="movement">
+              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
+              <div class="movement-description">
+                <h3>Gas Station</h3>
+                <p>Expenses #3123950 - <span>10 March 2020</span></p>
+              </div>
+              <p class="amount negative">€50.<sup>00</sup></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
