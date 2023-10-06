@@ -11,10 +11,10 @@
         <span class = "date"><%= f.input :date %></span>
           <!--%= f.input :date %-->
           <%= f.input :description %>
-          <%= f.input :currency %>
           <%= f.select :balance_id, options_for_select(@balances.map { |balance| [balance.id, balance.id] }) %>
           <%= f.input :amount %>
           <!--%= f.input :category %-->
+          <!--%= f.input :category, collection: @category, prompt: "Select category" %-->
           <%= f.input :category, collection: @category, prompt: "Select category" %>
           <!--adding an input to attached photo-->
           <span id="photo"><%= f.input :photo, as: :file %></span>

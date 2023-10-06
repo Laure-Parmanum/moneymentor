@@ -49,6 +49,7 @@
   padding: 10px;
   column-gap:15px;
   row-gap:15px;
+  justify-content: center;
 }
 .grid-item {
   // border for grid - to uncomment
@@ -56,13 +57,15 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  justify-content: center;
+  display: flex;
 
 }
-.item-1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
 
+.piechart{
+  margin-top: 100px;
+
+}
 
 .columns{
   font-size: 20px;
@@ -278,8 +281,3 @@ span.popup {
 .transaction_category_charts{
   color: #A74AC7;
 }
-
-
-
-
-
