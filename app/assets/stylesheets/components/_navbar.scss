@@ -1,41 +1,47 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   // background: #a37cf0;
-//   background-color: transparent;
-//   transition: 0.5s background-color ease;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-// .nav-link{
-//   color: white;
-// }
-// .btn-primary {
-//   color: white;
-//   // padding-right: 20px;
-// }
-
-
-
-// .navbar-lewagon-white {
-//   background-color: white !important;
-// }
-
 .navbar-lewagon {
   justify-content: space-between;
-  display: flex;
-  // background: #a37cf0;
-  background-color: transparent;
+  background: $darkblue;
+  // background-color: transparent;
   transition: 0.5s background-color ease;
-  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+.nav-link{
+  color: white;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.btn-primary {
+  color: white;
+  // padding-right: 20px;
 }
 
 
-.navbar-lewagon .navbar-brand img {
-  width: 60px;
+
+.navbar-lewagon-white {
+  background-color: white !important;
+}
+
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   display: flex;
+//   // background: #a37cf0;
+//   background-color: transparent;
+//   transition: 0.5s background-color ease;
+//   background: white;
+// }
+
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 60px;
+// }
+
+.nav-link:hover{
+  color: white;
 }
