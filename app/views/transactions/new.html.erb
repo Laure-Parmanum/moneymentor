@@ -21,8 +21,9 @@
           <!--%= f.input :photo, as: :file %-->
           <%= f.input :payment_method, collection: ['Credit Card', 'Cash', 'Bank Transfer'], prompt: "Select payment method" %>
           </span>
-          <div id= "create-transaction">
-            <%= f.button :submit %>
+          <div class="buttonsonform">
+            <%= f.submit 'create transaction',class: 'btn btn-primary mt-3' %>
+            <%= link_to 'cancel', transactions_path, class: 'btn btn-primary mt-3' %>
           </div>
         <% end %>
       </div>

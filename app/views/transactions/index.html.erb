@@ -4,8 +4,8 @@
     <%# <div class="container"> %>
     <h1 id="bannertitle">Your transactions</h1>
       <!--a class="btn btn-flat" href="#">Return to home</a-->
-      <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
-      <%= link_to 'create new transaction', new_transaction_path, class: 'btn btn-primary mt-3' %>
+
+
     </div>
  </div>
 
@@ -17,8 +17,8 @@
     <div class= "transaction_left_side">
 
       <%# <h1>This is our transaction view testing</h1> %>
-      <h1 id="tabletitle">Your latest transactions!</h1>
-
+      <h2 class="tabletitle">Your latest transactions!</h2>
+          <%= link_to 'create new transaction', new_transaction_path, class: 'btn btn-primary mt-3' %>
 
           <table class="styled-table">
             <thead>
@@ -44,7 +44,7 @@
             </tbody>
              <% end %>
           </table>
-
+         <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
           <%# </div>
         </div> %>
       <%# </div> %>
@@ -56,7 +56,7 @@
 
   <div class="grid-item">
     <div class="transaction_category_charts">
-      <h1>Transaction category</h1>
+      <h2 class="tabletitle">Transaction category</h2>
       <%= column_chart Transaction.group(:category).sum(:amount) %>
       <div class="piechart">
         <%= pie_chart Transaction.group(:category).count, style: "width:100%;" %>

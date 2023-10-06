@@ -15,28 +15,38 @@
   <li class ="details">Transaction type: <%= @transaction.transaction_type %></li> %!-->
 
 
-<div class="grid-container" style="--bs-gap: .25rem 1rem;">
-  <div class="grid-item item-1">
-    <p class="transaction-details">Transaction details for transaction <%=@transaction.id%> </p>
+<div class="grid-container show-grid-container" style="--bs-gap: .25rem 1rem;">
+  <div class="grid-item show-grid-item item-1 show-item-1">
+    <p class="transaction-details">Transaction# <%=@transaction.id%> </p>
   </div>
 
 
 
-  <div class="grid-item">
-    <li class ="details">Transaction ID: <%= @transaction.id %></li>
-    <li class ="details">Date: <%= @transaction.date %></li>
-    <li class ="details">Amount: <%= @transaction.amount %></li>
-    <li class ="details">Description: <%= @transaction.description %></li>
-    <li class ="details">Payment method: <%= @transaction.payment_method %></li>
-    <li class ="details">category: <%= @transaction.category %></li>
-    <li class ="details">Balance Account Number: <%= @transaction.balance.account_number%></li>
-    <li class ="details">Currency: <%= @transaction.currency %></li>
-    <li class ="details">Transaction type: <%= @transaction.transaction_type %></li>
+  <div class="show-grid-item">
+    <div class="card">
+      <h5 class="card-header">#<%= @transaction.id %></h5>
+    <div class="card-body">
+        <h5 class="card-title">Transaction details:</h5>
+        <p class="card-text">
+            <li class ="details">Transaction Number:
+            <span class="detailsdetails"><%= @transaction.id %></span>
+            </li>
+            <li class ="details">Date:   <span class="detailsdetails"><%= @transaction.date %></span></li>
+            <li class ="details">Amount:   <span class="detailsdetails"><%= @transaction.amount %></span></li>
+            <li class ="details">Description:   <span class="detailsdetails"><%= @transaction.description %></span></li>
+            <li class ="details">Payment Method:   <span class="detailsdetails"><%= @transaction.payment_method %></span></li>
+            <li class ="details">Category:   <span class="detailsdetails"><%= @transaction.category %></span></li>
+            <li class ="details">Balance Account:   <span class="detailsdetails"><%= @transaction.balance.account_number%></span></li>
+            <li class ="details">Currency:   <span class="detailsdetails"><%= @transaction.currency %></span></li>
+            <li class ="details">Transaction Type:   <span class="detailsdetails"><%= @transaction.transaction_type %></span></li></p>
+            <%= link_to 'Back', transactions_path, class: 'btn btn-primary mt-3' %>
+    </div>
+    </div>
   </div><!-- grid item 2-->
 
 
 
-  <div class="grid-item">
+  <div class="show-grid-item">
     <div class ="photo-display">
     <%= cl_image_tag @transaction.photo.key, height: 600, width: 600, crop: :fill %>
     </div>
