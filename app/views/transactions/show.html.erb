@@ -27,18 +27,44 @@
       <h5 class="card-header">#<%= @transaction.id %></h5>
     <div class="card-body">
         <h5 class="card-title">Transaction details:</h5>
-        <p class="card-text">
-            <li class ="details">Transaction Number:
-            <span class="detailsdetails"><%= @transaction.id %></span>
-            </li>
-            <li class ="details">Date:   <span class="detailsdetails"><%= @transaction.date %></span></li>
-            <li class ="details">Amount:   <span class="detailsdetails"><%= @transaction.amount %></span></li>
-            <li class ="details">Description:   <span class="detailsdetails"><%= @transaction.description %></span></li>
-            <li class ="details">Payment Method:   <span class="detailsdetails"><%= @transaction.payment_method %></span></li>
-            <li class ="details">Category:   <span class="detailsdetails"><%= @transaction.category %></span></li>
-            <li class ="details">Balance Account:   <span class="detailsdetails"><%= @transaction.balance.account_number%></span></li>
-            <li class ="details">Currency:   <span class="detailsdetails"><%= @transaction.currency %></span></li>
-            <li class ="details">Transaction Type:   <span class="detailsdetails"><%= @transaction.transaction_type %></span></li></p>
+          <table style="width:100%">
+            <tr>
+            <th><p class ="details">Transaction Number:</p></th>
+            <td><p class = "detailsdetails"><%= @transaction.id %></p></td>
+            </tr>
+            <tr>
+            <th><p class ="details">Date:</p></th>
+            <td><p class = "detailsdetails"><%= @transaction.date %></p> </td>
+            </tr>
+            <tr>
+            <th><p class ="details">Amount:</p></th>
+            <td><p class = "detailsdetails"><%= @transaction.amount %></td>
+            </tr>
+            <tr>
+            <th><p class ="details">Description:</p></th>
+            <td><p class = "detailsdetails"> <%= @transaction.description %></p></td>
+            </tr>
+            <tr>
+            <th><p class ="details">Payment Method:</p></th>
+            <td><p class = "detailsdetails"><%= @transaction.payment_method %></p></td>
+            </tr>
+            <tr>
+            <th><p class ="details">Category:</p></th>
+            <td><p class = "detailsdetails"><%= @transaction.category %></p></td>
+            </tr>
+            <tr>
+            <td><p class ="details">Balance Account:</p></td>
+            <th><p class = "detailsdetails"><%= @transaction.balance.account_number%></p></th>
+            </tr>
+            <tr>
+            <td><p class ="details">Currency:</p></td>
+            <th><p class = "detailsdetails"> <%= @transaction.currency %></p></th>
+            </tr>
+            <tr>
+            <td><p class ="details">Transaction Type:</p></td>
+            <th><p class = "detailsdetails"> <%= @transaction.transaction_type %></p></th>
+            </tr>
+          </table>
             <%= link_to 'Back', transactions_path, class: 'btn btn-primary mt-3' %>
     </div>
     </div>
