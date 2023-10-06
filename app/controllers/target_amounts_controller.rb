@@ -14,7 +14,6 @@ class TargetAmountsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -35,7 +34,6 @@ class TargetAmountsController < ApplicationController
 
   # /edit
   def edit
-
   end
 
   # update
@@ -61,5 +59,4 @@ class TargetAmountsController < ApplicationController
   def target_params
     params.require(:target_amount).permit(:id, :target_date, :target_amount, :balance_id, :status)
   end
-
 end
