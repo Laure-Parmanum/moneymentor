@@ -297,8 +297,10 @@
 }
 
 .detailsdetails{
-  color: $black;
-  font-weight: 500;
+  color: $darkblue;
+  font-weight:bold;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 .card-text{
@@ -308,4 +310,13 @@
 .card{
   min-width: 500px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.details{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-title{
+  font-family: sans-serif;
 }
