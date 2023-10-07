@@ -6,7 +6,6 @@
     <h2>Current Balance</h2>
     <p class="total-balance"><%= number_to_currency(@balance.current_balance , unit: "MUR ") %></p>
   </div>
-  <% console %>
   <div class="balance-movement">
     <% @transactions.each do |transaction| %>
       <%= link_to transaction_path(transaction) do %>
