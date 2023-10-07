@@ -20,8 +20,8 @@
       <%= f.input :status, collection: [ "Not Archived", "Archived", "Pending" ] %>
       <%= f.input :target_amount %>
       <div class="button-group">
-        <%= f.submit'Submit', class: 'btn btn-ruby' %>
-        <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-ruby' %>
+        <%= f.submit'Submit', class: 'btn btn-primary mt-3' %>
+        <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-primary mt-3' %>
       </div>
     <% end %>
     </div>
