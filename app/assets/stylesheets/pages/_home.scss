@@ -5,17 +5,13 @@
 
   h2{
     text-align: center;
-    color: white;
+    color: $darkblue;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
     margin-left: 650px;
     margin-right: 650px;
-
-    background-color: $darkblue;
-
-
-
+    font-weight: bold;
 
   }
 
@@ -146,19 +142,20 @@
 
 
   .btn-gradient {
-    color: white;
+    background-color: $blue !important;
+    color: $lighterblue;
     padding: 8px 24px;
-    border-radius: 4px;
-    font-weight: bold;
-    background: #6A65FF;
-    border: 1px solid #0F60C4;
-    border-radius: 12px;
+    border-radius: 5px;
+    background: #670BFF;
+    transition: background 0.3s ease;
+    
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   }
 
   .btn-gradient:hover {
-    background: linear-gradient(#147EFF, #0F67DA);
-    color: #EDEAFB;
+    background: #4D04C4;
+    color: white;
   }
 
 
@@ -234,4 +231,20 @@ a {
 .homeright-image img{
   height: auto;
   width: 500px;
+}
+
+.btn-flat {
+  background-color: $blue !important;
+  color: $lighterblue;
+  padding: 8px 24px;
+  border-radius: 5px;
+  background: #670BFF;
+  transition: background 0.3s ease;
+  margin-left: 80px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-flat:hover {
+  background: #4D04C4;
+  color: white;
 }

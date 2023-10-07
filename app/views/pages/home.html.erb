@@ -8,9 +8,9 @@
 
       <% if !user_signed_in? %>
         <%= link_to "Get started", new_user_session_path, class: "btn btn-gradient" %>
-
       <% end %>
     </div>
+
     <div class="homeright-image">
       <%= image_tag('undraw.png') %>
     </div>
@@ -20,24 +20,21 @@
       <h2> Features</h2>
   <div class="features-section-container">
       <div class="features-section div1">
-      <%= link_to balances_path do%>
           <%= image_tag('B1.png') %>
-      <% end %>
           <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
+      <%= link_to "Balances", balances_path, class: "btn btn-flat" %>
       </div>
 
     <div class="features-section div2">
-      <%= link_to target_amounts_path do%>
           <%= image_tag('TGT.png') %>
-      <% end %>
           <p>Saving money today secures a brighter tomorrow.</p>
+      <%= link_to "Target", target_amounts_path, class: "btn btn-flat" %>
     </div>
 
     <div class="features-section div3">
-      <%= link_to transactions_path do%>
           <%= image_tag('T.png') %>
-      <% end %>
             <p>Maintaining a balanced account ensures financial stability and peace of mind.</p>
+      <%= link_to "Transactions", transactions_path, class: "btn btn-flat" %>
     </div>
 
   </div>
