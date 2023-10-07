@@ -9,8 +9,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
-    margin-left: 650px;
-    margin-right: 650px;
+    margin-inline:auto;
     font-weight: bold;
 
   }
@@ -54,6 +53,7 @@
     img {
       width: 80%;
       padding-left: 50px;
+      margin-bottom: 20px;
     }
     p {
       text-decoration: none;
@@ -120,7 +120,7 @@
 
 
   .banner h1 {
-    margin: 0;
+    margin-bottom: 10px;
     color: black;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 45px;
@@ -148,7 +148,7 @@
     border-radius: 5px;
     background: #670BFF;
     transition: background 0.3s ease;
-    
+
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   }
@@ -160,9 +160,6 @@
 
 
   .aboutus-section-container p{
-    text-align: justify;
-    color: rgb(229, 80, 229);
-
     color: black;
     width: 300px;
     font-size: 20px;
