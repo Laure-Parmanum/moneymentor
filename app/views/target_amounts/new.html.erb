@@ -1,7 +1,7 @@
-<div class="row py-5">
-<section>
+<div class="row py-2">
+<%# <section>
    <div class="banner-target"></div>
-  </section>
+  </section> %>
 
 <div class="targetamount_container_new">
 <div class="center-text">
@@ -9,7 +9,7 @@
     <p class="display-4">Set Your Financial Goals Today!</p>
     <p class="lead">The easiest way to save your money is to set a target.</p>
 </div>
-<div class="money-tracking-app form-container"> <!-- Added form-container class -->
+<div class="money-tracking-app form-container">
   <p>Set financial goals, track your progress, and make your dreams a reality. Start by creating a new target below.</p>
   <h1 class="arn">Create a new target</h1>
 
@@ -20,8 +20,8 @@
       <%= f.input :status, collection: [ "Not Archived", "Archived", "Pending" ] %>
       <%= f.input :target_amount %>
       <div class="button-group">
-        <%= f.submit'Submit', class: 'btn btn-ruby' %>
-        <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-ruby' %>
+        <%= f.submit'Submit', class: 'btn btn-primary mt-3' %>
+        <%= link_to 'Back to Targets', target_amounts_path, class: 'btn btn-primary mt-3' %>
       </div>
     <% end %>
     </div>

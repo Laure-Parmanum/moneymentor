@@ -7,7 +7,7 @@
   height: 30vh;
   border-radius: 20px;
   width: 95%;
-  margin: 5rem 2rem;
+  margin: 2rem 2rem;
   align-items: center;
   justify-content: center;
   }
@@ -30,9 +30,11 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+
   }
   .links__container > * {
-    margin: 0 !important;
+    margin: 10px ;
+
   }
 
   .image-right{
@@ -171,7 +173,7 @@
     h1 {
       text-align: center;
       margin-bottom: 20px;
-      color: #333;
+      color: #1d201f;
     }
     .form-group {
       margin-bottom: 15px;
@@ -317,7 +319,7 @@
     padding: 0 40px;
     margin-top: 90px;
     h1{
-      color: #fffdfd;
+      color: #1d201f;
       font: CoFo Sans;
       font-size: 60px;
       margin-bottom: 40px;
@@ -328,7 +330,7 @@
       font-size: 20px;
     }
     h2{
-      color: #fffdfd;
+      color:#1d201f;
       font: CoFo Sans;
       font-size: 30px;
       padding-top: 30px;
@@ -401,8 +403,6 @@
       font-size: 30px;
     }
 
-
-
 }
 
 .targetamout_container_edit {
@@ -438,7 +438,7 @@
 
 h1, .h1  {
   font-size: 2rem;
-  color: #421111;
+  color:#1d201f;
   text-align: left;
   margin: 2rem;
 }
@@ -456,6 +456,7 @@ h1, .h1  {
   color:#fff;
   border-radius:2px;
   border:2px solid #c7c7c7;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn-ruby-invese{
@@ -482,52 +483,6 @@ ul.list-group {
   border-radius: 20px;
 }
 
-// }
-
-// .gradient-background {
-//   background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
-//   background-size: 180% 180%;
-//   animation: gradient-animation 18s ease infinite;
-// }
-
-// @keyframes gradient-animation {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
-
-// .image-right {
-//   border-radius: 20px!important;
-// }
-
-
-// h1, .h1 {
-//   font-size: 2rem;
-//   color: #421111!important;
-//   text-align: left!important;
-//   margin: 2rem;
-// }
-
-
-// .btn-ruby{
-//   background:#421111!important;
-//   color:#fff;
-//   border-radius:20px;
-//   border:2px solid #c7c7c7;
-// }
-
-// .links__container.ml-5 {
-//   padding: 1rem;
-// }
-
-// .btn-ruby-invese{
-//   color:#421111!important;
-//   border:2px solid #421111!important;
-//   border-radius:20px;
-// }
+.table {
+  vertical-align: middle
+}
