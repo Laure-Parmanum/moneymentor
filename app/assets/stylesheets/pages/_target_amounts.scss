@@ -454,15 +454,16 @@ h1, .h1  {
 .btn-ruby{
   background:#6A65FF;
   color:#fff;
-  border-radius:20px;
+  border-radius:2px;
   border:2px solid #c7c7c7;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn-ruby-invese{
   background:#fff ;
   color:#6A65FF!important;
   border:2px solid #421111!important;
-  border-radius:20px;
+  border-radius:2px;
 }
 
 .targetamount_container_new .form-container ,.form-select ,.form-control{
