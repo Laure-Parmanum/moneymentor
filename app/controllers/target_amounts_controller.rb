@@ -14,7 +14,6 @@ class TargetAmountsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -35,7 +34,6 @@ class TargetAmountsController < ApplicationController
 
   # /edit
   def edit
-
   end
 
   # update
@@ -49,8 +47,7 @@ class TargetAmountsController < ApplicationController
 
   # /delete
   def destroy
-    @target.destroy
-    redirect_to target_amounts_path, status: :see_other
+   @target.destroy
   end
 
   private
