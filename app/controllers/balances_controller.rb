@@ -14,6 +14,7 @@ class BalancesController < ApplicationController
   def show
     # @balances = Balance.all
     # @targets = TargetAmount.all
+    @transactions = @balance.transactions
   end
 
   def new

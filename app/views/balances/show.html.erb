@@ -1,78 +1,38 @@
-
-
-<%# <div>This is where the user is redirected when he clicks on a specific account</div> %>
-<%# <div>balance_path(@balances) - /balances/:id </div> %>
-<%# <div>should have a button for edit or add account button that redirects to the new page</div> %>
-
 <%#  %>
       <!-- RIGHT SIDE: CURRENT BALANCE SHEET  -->
       <%# This is where the user is redirected when they click on a specific account %>
  <div class="balance-sheet">
-        <div class="header">
-          <h2>Current Balance</h2>
-          <p class="total-balance">€729.<sup>00</sup></p>
+  <div class="header">
+    <h2>Current Balance</h2>
+    <p class="total-balance"><%= number_to_currency(@balance.current_balance , unit: "MUR ") %></p>
+  </div>
+  <% console %>
+  <div class="balance-movement">
+    <% @transactions.each do |transaction| %>
+      <%= link_to transaction_path(transaction) do %>
+        <div class="movement <%= transaction.transaction_type %>">
+          <% if transaction.transaction_type == 'Credit' %>
+          <div>
+            +
+          </div>
+            <div class="amount positive"><%= number_to_currency(transaction.amount , unit: "MUR ") %></div>
+          <% else %>
+          <div>
+            -
+          </div>
+          <div class="amount negative"><%= number_to_currency(transaction.amount , unit: "MUR ") %></div>
+          <% end %>
+          <div class="movement-description">
+
+
+            <h3><%= transaction.description %></h3>
+            <p><%= transaction.category %></p>
+
+
+            <p><%= transaction.created_at.strftime("%d %b %Y %H:%M") %></p>
+          </div>
         </div>
-        <div class="balance-movement">
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
-              <div class="movement-description">
-                <h3>Apple iPhone X, 128Gb</h3>
-                <p>Electronics #32343424 - <span>12 March 2020</span></p>
-              </div>
-              <p class="amount negative">€650.<sup>00</sup></p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/L0A.svg" alt="" />
-              <div class="movement-description">
-                <h3>Funds Added</h3>
-                <p>Payment #5435 - <span>11 March 2020</span></p>
-              </div>
-              <p class="amount positive">€900.<sup>00</sup></p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
-              <div class="movement-description">
-                <h3>Energy Bill</h3>
-                <p>Expenses #745237423 - <span>11 March 2020</span></p>
-              </div>
-              <p class="amount negative">€84.<sup>90</sup></p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
-              <div class="movement-description">
-                <h3>The Eye Cinema Tickets</h3>
-                <p>Entertainment #323345662 - <span>10 March 2020</span></p>
-              </div>
-              <p class="amount negative">€40.<sup>00</sup></p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
-              <div class="movement-description">
-                <h3>McBurger Restaurant</h3>
-                <p>Food #210974 - <span>10 March 2020</span></p>
-              </div>
-              <p class="amount negative">€10.<sup>50</sup></p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="movement">
-              <img src="https://svgshare.com/i/Kz0.svg" alt="" />
-              <div class="movement-description">
-                <h3>Gas Station</h3>
-                <p>Expenses #3123950 - <span>10 March 2020</span></p>
-              </div>
-              <p class="amount negative">€50.<sup>00</sup></p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
