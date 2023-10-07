@@ -76,7 +76,11 @@ class TransactionsController < ApplicationController
       end
     elsif @transaction.transaction_type == "Debit"
       # Credit transaction, simply add the amount to the balance
-      chosen_balance.current_balance += @transaction.amount
+      if chosen_balance.current_balance.nil?
+        chosen_balance.current_balance = @transaction.amount
+      else
+        chosen_balance.current_balance += @transaction.amount
+      end
     else
       # Invalid transaction type
       @transaction.errors.add(:transaction_type, "Invalid transaction type.")

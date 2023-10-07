@@ -12,13 +12,15 @@
 
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
 
-    <%= yield %>
-
+    <div class="spacer">
+      <%= yield %>
+    </div>
+    <footer>
+      <%= render "shared/footer" %>
+    </footer>
   </body>
-  <footer>
-    <%= render "shared/footer" %>
-  </footer>
 </html>
