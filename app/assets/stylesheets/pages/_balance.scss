@@ -307,26 +307,31 @@
 
 .header h2 {
   font-size: 40px;
-  color: #000;
+  color:$darkblue;
+  text-align: center;
+  font-weight: bold;
 }
 
 .total-balance{
   font-size: 20px;
-  color: #000;
+  color:$darkblue;
+  text-align: center;
 }
 
 .balance-movement {
   border-top: 1px solid var(--light-gray);
   width: 420px;
-  margin: 0 40px;
+  margin: 0 auto;
 }
 
 .movement {
   display: flex;
   align-items: center;
-  justify-items: left;
-  justify-content: space-between;
-  margin: 40px 0;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .movement img {
@@ -349,19 +354,23 @@
   margin-top: 3px;
 }
 
+.movement.Credit{
+color: #000;
+
+}
+
 .amount {
   font-weight: bold;
-  margin-left: auto;
 }
 
 .negative {
   font-size: 20px;
-  color: #000;
+  color: red;
 }
 
 .positive {
   font-size: 20px;
-  color: #000;
+  color: green;
 }
 
 
