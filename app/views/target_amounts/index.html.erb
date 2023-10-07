@@ -13,10 +13,22 @@
               <table class="table">
                 <thead>
                   <tr>
+
                     <th>Date</th>
                     <th>Amount</th>
                     <th>Status</th>
                     <th>Action</th>
+
+                    <td><%= target.target_date.strftime('%Y-%m-%d') %></td>
+                    <td><%= target.target_amount %></td>
+                    <td><%= target.status %></td>
+                    <td>
+                      <%= link_to 'Show', target, class: 'btn btn-primary mt-3' %>
+                      <%= link_to 'Edit', edit_target_amount_path(target), class: 'btn btn-primary mt-3' %>
+                      <%= link_to 'Delete', target_amount_path(target), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-primary mt-3' %>
+
+                    </td>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -43,10 +55,16 @@
       </div>
     </div>
 
+
     <div class="links__container ml-5 container fluid">
       <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-primary mt-3' %>
       <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3' %>
     </div>
+
+    <div class="links__container ml-5">
+    <%= link_to 'New Target', new_target_amount_path, class: 'btn btn-primary mt-3' %>
+    <%= link_to 'Go to Home Page', root_path, class: 'btn btn-primary mt-3-invese' %>
+
   </div>
 
   <div class="col-12 col-md-6">
