@@ -7,7 +7,7 @@
   height: 30vh;
   border-radius: 20px;
   width: 95%;
-  margin: 5rem 2rem;
+  margin: 2rem 2rem;
   align-items: center;
   justify-content: center;
   }
@@ -30,9 +30,11 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+
   }
   .links__container > * {
-    margin: 0 !important;
+    margin: 10px ;
+
   }
 
   .image-right{
@@ -171,7 +173,7 @@
     h1 {
       text-align: center;
       margin-bottom: 20px;
-      color: #333;
+      color: #1d201f;
     }
     .form-group {
       margin-bottom: 15px;
@@ -317,7 +319,7 @@
     padding: 0 40px;
     margin-top: 90px;
     h1{
-      color: #fffdfd;
+      color: #1d201f;
       font: CoFo Sans;
       font-size: 60px;
       margin-bottom: 40px;
@@ -328,7 +330,7 @@
       font-size: 20px;
     }
     h2{
-      color: #fffdfd;
+      color:#1d201f;
       font: CoFo Sans;
       font-size: 30px;
       padding-top: 30px;
@@ -436,7 +438,7 @@
 
 h1, .h1  {
   font-size: 2rem;
-  color: #421111;
+  color:#1d201f;
   text-align: left;
   margin: 2rem;
 }
@@ -479,4 +481,8 @@ ul.list-group {
 
 .bg-white.shadow {
   border-radius: 20px;
+}
+
+.table {
+  vertical-align: middle
 }
