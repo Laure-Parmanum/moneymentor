@@ -9,13 +9,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-left: 650px;
     margin-right: 650px;
 
-    background-color: rgb(229, 80, 229);
+    background-color: $darkblue;
 
-    background-color: #A74AC7;
 
 
 
@@ -33,13 +31,11 @@
   margin-right: 30px;
 
 
-  background-color: rgb(134, 240, 229);
-
-  background-color: rgb(130, 214, 206);
+  background-color: white;
 
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
 
@@ -110,9 +106,13 @@
     padding: 50px 0;
     height: 100%;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    gap: 300px;
+    gap: 90px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 1rem;
 
 
 
@@ -125,19 +125,11 @@
 
   .banner h1 {
     margin: 0;
-    color: rgb(130, 214, 206);
+    color: black;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
+    font-size: 45px;
     font-weight: bold;
-    ext-shadow:
-  0 0 7px #fff,
-  0 0 10px #fff,
-  0 0 21px #fff,
-  0 0 42px #0fa,
-  0 0 82px #0fa,
-  0 0 92px #0fa,
-  0 0 102px #0fa,
-  0 0 151px #0fa;
+    text-align: left;
 
   }
 
@@ -158,8 +150,7 @@
     padding: 8px 24px;
     border-radius: 4px;
     font-weight: bold;
-    background: #A74AC7;
-    transition: background 0.3s ease;
+    background: #6A65FF;
     border: 1px solid #0F60C4;
     border-radius: 12px;
 
@@ -167,7 +158,7 @@
 
   .btn-gradient:hover {
     background: linear-gradient(#147EFF, #0F67DA);
-    color: white;
+    color: #EDEAFB;
   }
 
 
@@ -183,10 +174,10 @@
   }
 
   .container-left {
-    background-color: #4abeb8ea;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 1px 1px 5px 0px  #000;
+    min-width: 400px;
+
   }
 
   .aboutus-section{
@@ -194,11 +185,10 @@
     justify-content: center;
     align-items: center;
     gap: 150px;
-    background-color:rgb(134, 240, 229);
-    background-color: rgb(130, 214, 206);
+    background-color: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 1px 1px 5px 0px  #000;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 50px;
@@ -232,4 +222,16 @@
 
 a {
   text-decoration: none;
+}
+
+#homepage-banner{
+  h1{
+    display: block;
+
+  }
+}
+
+.homeright-image img{
+  height: auto;
+  width: 500px;
 }
